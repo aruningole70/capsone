@@ -1,0 +1,35 @@
+.baneer{
+    display: flex;
+    // width: 100%;
+    flex-wrap: wrap-reverse;
+}
+.brand-image{
+    width: 100%;
+    img{
+        width: 100%;
+        padding-top: 2%;
+    }
+}
+.brand-box{
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1B252C;
+    text-align: center;
+    font: normal normal 600 48px/60px Source Serif Pro;
+    letter-spacing: 0px;
+    color: #FFFFFF;
+    opacity: 1;
+    align-items: center;
+    justify-content: center;
+    img{
+        width: 100px;
+        height: 20px;
+    }
+}
+@media ((max-width: 768px)) {
+    .brand-box{
+        margin-top: -10%;
+    margin-left: 25%
+    }
+}

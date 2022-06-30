@@ -1,0 +1,58 @@
+.footer-item {
+    display: flex;
+    flex-wrap: wrap;
+
+    h4 {
+        text-align: left;
+        font: normal normal 600 16px/24px Muli;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
+    }
+
+    li {
+        text-align: left;
+        list-style-type: none;
+        font: normal normal normal 16px/24px Muli;
+        letter-spacing: 0px;
+        color: #545D63;
+        opacity: 1;
+    }
+}
+
+.footer-icon {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.logo-image {
+    height: 48px;
+    width: 112px;
+}
+
+.policy {
+    text-align: center;
+
+    p {
+
+        font: normal normal normal 14px/18px Muli;
+        letter-spacing: 0px;
+        color: #545D63;
+        opacity: 1;
+    }
+}
+
+.contact-com {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    a {
+        text-align: right;
+        text-decoration: underline;
+        font: normal normal normal 14px/18px Proxima Nova;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
+    }
+}

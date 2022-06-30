@@ -1,0 +1,180 @@
+.main-image {
+    img {
+        width: 100%;
+    }
+}
+
+.sub-images {
+    padding-left: 13%;
+
+    .sub-img-style {
+        padding: 5%;
+
+        img {
+            width: 95%;
+        }
+    }
+}
+
+.p-logo {
+    display: flex;
+    padding-top: 5%;
+    justify-content: space-around;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.p-logo2 {
+    display: flex;
+    padding-top: 5%;
+    justify-content: space-around;
+
+    li {
+        list-style-type: none;
+    }
+}
+
+.title {
+    h1 {
+        text-align: left;
+        font: normal normal normal 14px/20px Muli;
+        letter-spacing: 0px;
+        opacity: 1;
+    }
+
+    h2 {
+        text-align: left;
+        font: normal normal 600 36px/45px Source Serif Pro;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
+    }
+}
+
+.color-button {
+    .button1 {
+        background-color: #3D84FF;
+        border-radius: 10px;
+    }
+
+    .button2 {
+        background-color: #EB00FF;
+        border-radius: 10px;
+    }
+
+    .button3 {
+        background-color: #545D63;
+        border-radius: 10px;
+    }
+
+    .button4 {
+        background: #B5B7BC 0% 0% no-repeat padding-box;
+        border-radius: 10px;
+        opacity: 1
+    }
+
+    p {
+        text-align: left;
+        font: normal normal 600 20px/30px Muli;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1
+    }
+}
+
+.size-buttons {
+    p {
+        text-align: left;
+        font: normal normal 600 20px/30px Muli;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1
+    }
+
+    button {
+        width: 64px;
+        height: 40px;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        text-align: center;
+        border: 2px solid #91959C;
+        border-radius: 6px;
+        opacity: 1;
+    }
+}
+
+.quentity-button {
+    p {
+        text-align: left;
+        font: normal normal 600 20px/30px Muli;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1
+    }
+
+    input {
+        width: 114px;
+        height: 40px;
+        border: 2px solid #91959C;
+        text-align: center;
+        border-radius: 8px;
+        opacity: 1;
+    }
+
+    button {
+        border: none;
+        background: none;
+        opacity: 1;
+    }
+}
+
+.add-cart-button {
+    padding: 3%;
+
+    button {
+        width: 318px;
+        height: 40px;
+        text-align: center;
+        font: normal normal bold 14px/16px Muli;
+        letter-spacing: 0px;
+        color: #FFFFFF;
+        background: #1F39FF 0% 0% no-repeat padding-box;
+        border-radius: 28px;
+        opacity: 1;
+    }
+}
+
+.shair-buttan {
+    button {
+        border: none;
+        background: none;
+        opacity: 1;
+    }
+}
+
+.product-bottom {
+    h1 {
+        text-align: left;
+        font: normal normal 600 36px/45px Source Serif Pro;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1
+    }
+
+    h6 {
+        text-align: left;
+        font: normal normal 600 20px/25px Muli;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
+    }
+
+    h4 {
+        text-align: left;
+        font: normal normal 600 20px/25px Muli;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
+    }
+}

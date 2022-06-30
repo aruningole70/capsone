@@ -1,0 +1,19 @@
+.banner-products{
+    height: 486px;
+    .active{
+        width: 70%;
+        height: 280px;
+    }
+}
+.paginate{
+ ul{
+    display: flex;
+    justify-content: space-evenly;
+    li{
+        list-style-type: none;
+        button{
+            border: none;
+        }
+    }
+ }
+}
