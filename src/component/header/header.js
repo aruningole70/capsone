@@ -1,5 +1,8 @@
 import '../../App.css';
 import search from '../../assects/search.svg';
+import shoppingbag from '../../assects/shoppingbag.svg';
+import user from '../../assects/user.svg';
+import logo from '../../assects/logo.png';
 // import  search  from '../../assets/images/search.svg';
 import { useNavigate } from 'react-router-dom';
 // import mobileMenue from './mobi-nav';
@@ -17,7 +20,7 @@ function Header() {
   return (
     <nav className='aem-Grid'>
         <div className='aem-Grid aem-Grid--12 demo-Grid main-nav'>
-        <h1 onClick={homeClick} className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 aem-GridColumn--tablet--6 demo-GridColumn demo-GridColumn--separator logo-image'><img src={"../../../images/logo.png"} /></h1>
+        <h1 onClick={homeClick} className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 aem-GridColumn--tablet--6 demo-GridColumn demo-GridColumn--separator logo-image'><img src={logo} /></h1>
         <div className='aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--phone--12 aem-GridColumn--tablet--6 demo-GridColumn demo-GridColumn--separator list-item'>
             <ul>
                 <li><a href='#'>Women</a></li>
@@ -28,9 +31,9 @@ function Header() {
         </div>
         <div className='aem-GridColumn aem-GridColumn--default--4 demo-GridColumn demo-GridColumn--separator list-item-icon'>
             <ul>
-                <li><img src={"../../../logo/search.svg"} />search</li>
-                <li><img src={"../../../logo/user.svg"} />Sign in</li>
-                <li onClick={handleClick}><a><img src={"../../../logo/shopping-bag.svg"} /></a></li>
+                <li><img src={search} />search</li>
+                <li><img src={user} />Sign in</li>
+                <li onClick={handleClick}><a><img src={shoppingbag} /></a></li>
             </ul>
         </div>
         </div>
@@ -38,8 +41,8 @@ function Header() {
             <ul>
                 <li><button><img src={"../../../logo/menu.svg"} /></button></li>
                 <li onClick={homeClick}><img src={"../../../images/logo.png"} /></li>
-                <li><img src={"../../../images/search.svg"} /></li>
-                <li onClick={handleClick}><img src={"../../../logo/shopping-bag.svg"} /></li>
+                <li><img src={search} /></li>
+                <li onClick={handleClick}><img src={shoppingbag} /></li>
             </ul>
         </div>
     </nav>
