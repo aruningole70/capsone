@@ -1,8 +1,12 @@
 import React from "react";
 import '../../../App.css';
+import onFilterChange from '../listing-banner/listing-banner'
 // import SideBar from "../side-bar/side-bar";
 
 function Filter() {
+//    const onFilterChange =() =>{
+
+//     }
     return (
         <div className="demo-GridRowExample-markup">
             <div className="aem-Grid aem-Grid--12 demo-Grid filter-banner">
@@ -13,7 +17,7 @@ function Filter() {
                     <p>38 Results</p>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6  aem-GridColumn--phone--hide demo-GridColumn drop-down">
-                    <select name="" id="">
+                    <select name="" id="" onChange={onFilterChange}>
                         <option value="Sort by list">Sort by list</option>
                         <option value="categiry">Sort by Price</option>
                     </select>

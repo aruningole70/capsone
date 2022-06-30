@@ -19,8 +19,13 @@ const onPaginationChange =(start, end) =>{
     // console.log(start, end);
 }
 
-
-
+console.log(props);
+const onFilterChange =(value) =>{
+    console.log(value);
+    if(value){
+        props.data.sort((a,b) => a.price - b.price)
+    }
+}
     const handleOnSubmit = (id) => {
     navigate('/product-detail/'+id);
     };
