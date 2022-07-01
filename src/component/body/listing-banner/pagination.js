@@ -1,7 +1,8 @@
 // import { Button } from "bootstrap";
 import React, { useEffect, useState } from "react";
 import '../../../App.css';
-import heart from '../../../assects/heart.svg';
+import left from '../../../assects/left.svg';
+import right from '../../../assects/right.svg';
 
 const Pgination = ({ showperpage, onPaginationChange, total }) => {
 
@@ -32,12 +33,12 @@ const Pgination = ({ showperpage, onPaginationChange, total }) => {
     return (
         <div className="paginate">
             <ul>
-                <li><button onClick={() => onButtonClick("prev")}><img src="../../../logo/chevron-left.svg" alt="" /></button></li>
+                <li><button onClick={() => onButtonClick("prev")}><img src={left} alt="" /></button></li>
                 <li><span>1</span></li>
                 <li><span>2</span></li>
                 <li><span>3</span></li>
                 <li><span>4</span></li>
-                <li><button onClick={() => onButtonClick("next")}><img src="../../../logo/chevron-right.svg" alt="" /></button></li>
+                <li><button onClick={() => onButtonClick("next")}><img src={right} alt="" /></button></li>
             </ul>
         </div>
     );

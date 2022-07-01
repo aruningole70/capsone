@@ -1,4 +1,7 @@
 import '../../App.css';
+import instagram from '../../assects/instagram.svg';
+import facebook from '../../assects/facebook.svg';
+import twitter from '../../assects/twitter.svg'
 
 function Footer() {
     return (
@@ -25,9 +28,9 @@ function Footer() {
                     <h4>Follow Us!</h4>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
                     <div className='footer-icon'>
-                        <li><img src={"../../../logo/instagram.svg"} /></li>
-                        <li><img src={"../../../logo/facebook.svg"} /></li>
-                        <li><img src={"../../../logo/twitter.svg"} /></li>
+                        <li><img src={instagram} /></li>
+                        <li><img src={facebook} /></li>
+                        <li><img src={twitter} /></li>
                     </div>
                 </div>
             </div>
