@@ -1,5 +1,12 @@
 import React from "react";
 import '../../../App.css';
+import headerline from '../../../assects/headerline.svg';
+import minus from '../../../assects/minus.svg';
+import plus from '../../../assects/plus.svg';
+import edit from '../../../assects/edit.svg';
+import trash from '../../../assects/trash.svg';
+import heart from '../../../assects/heart.svg';
+import lock from '../../../assects/lock.svg';
 import { incCart , decCart , Remove  } from '../../../redux/acion/index';
 
 // import store from "../../../store";
@@ -15,7 +22,7 @@ function Cart() {
         <div className="demo-GridRowExample-markup cart">
             <header>Your Shopping Bag<br />
             {/* <h1>{updatedState.count}</h1> */}
-                <img src="../../../images/max-width_header.svg" alt="here is shape" />
+                <img src={headerline} alt="here is shape" />
             </header>
             <div className="aem-Grid aem-Grid--12 demo-Grid cart-section">
                 <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn ">
@@ -32,14 +39,14 @@ function Cart() {
                             <li>${prod.price}</li>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--3 aem-Grid--tablet--6 aem-Grid--phone--1 add-minus-icon">
-                            <button onClick={() =>dispatch(decCart(prod))}><img src={"../../../logo/minus-circle.svg"} alt="photo" /></button>
+                            <button onClick={() =>dispatch(decCart(prod))}><img src={minus} alt="photo" /></button>
                             <input type="text" value={prod.count}/>
-                            <button onClick={() =>dispatch(incCart(prod))}><img src={"../../../logo/plus-circle.svg"} alt="photo" /></button>
+                            <button onClick={() =>dispatch(incCart(prod))}><img src={plus} alt="photo" /></button>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--3 aem-Grid--tablet--6 aem-Grid--phone--1 ear-button">
-                            <button><img src={"../../../logo/edit-2.svg"} alt="photo" />Edit item</button><br />
-                            <button onClick={() =>dispatch(Remove(prod))}><img src={"../../../logo/trash-2.svg"} alt="photo" />Remove</button><br />
-                            <button><img src={"../../../logo/heart.svg"} alt="photo" />Save for later</button>
+                            <button><img src={edit} alt="photo" />Edit item</button><br />
+                            <button onClick={() =>dispatch(Remove(prod))}><img src={trash} alt="photo" />Remove</button><br />
+                            <button><img src={heart} alt="photo" />Save for later</button>
                         </div>
                     </div>
                  );
@@ -94,7 +101,7 @@ function Cart() {
                             </div>
                         </div>
                         <div className="cart-button">
-                            <div className="chekout"><button> <img src={"../../../logo/lock.svg"} alt="here is lock logo" />CHECKOUT</button></div>
+                            <div className="chekout"><button> <img src={lock} alt="here is lock logo" />CHECKOUT</button></div>
                             <div className="paypal"><button className="imp-btn" style={{ backgroundImage: "url(PP_BTN@2x.png)" }}></button></div>                   
                         </div>
                     </div>
