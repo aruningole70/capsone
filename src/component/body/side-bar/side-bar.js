@@ -4,6 +4,7 @@ import '../../../App.css';
 function SideBar(){
 return(
     <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide demo-GridColumn sort-option">
+          <p><span>Clothing / Women’s / Outerwear</span></p>
     <h2>Filters</h2>
     <hr />
     <div className="chekboxes">

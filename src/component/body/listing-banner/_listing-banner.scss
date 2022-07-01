@@ -16,4 +16,53 @@
         }
     }
  }
+}.filter-banner {
+    display: flex;
+    flex-wrap: wrap;
+
+    p {
+        text-align: left;
+        font: normal normal 600 16px/20px Muli;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1;
+
+        span {
+            text-align: left;
+            font: normal normal normal 16px/24px Muli;
+            letter-spacing: 0px;
+            opacity: 1;
+        }
+    }
 }
+
+.drop-down {
+    select {
+        width: 254px;
+        float: right;
+        background: #FFFFFF 0% 0% no-repeat padding-box;
+        border: 2px solid #B5B7BC;
+        border-radius: 8px;
+        opacity: 1;
+    }
+}
+.filter-result{
+    text-align: center;
+    ul{
+        display: flex;
+        text-decoration: underline;
+        li{
+            list-style-type: none;
+            padding: 10px;
+        }
+    }
+    li{
+        list-style-type: none;
+    }
+}
+@media (min-width:600px) {
+    .filter-result{
+        display: none;
+    }
+}
+
