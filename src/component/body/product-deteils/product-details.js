@@ -2,10 +2,26 @@ import React, { useState } from "react";
 import '../../../App.css';
 import { useParams } from 'react-router-dom';
 import { useEffect } from "react";
-import { useSelector , useDispatch } from 'react-redux';
-import { incNumber , decNumber, addToCart } from '../../../redux/acion/index';
+import { useSelector, useDispatch } from 'react-redux';
+import { incNumber, decNumber, addToCart } from '../../../redux/acion/index';
+import slack from '../../../assects/slack.svg';
+import feather from '../../../assects/feather.svg';
+import coffee from '../../../assects/coffee.svg';
+import layers from '../../../assects/layers.svg';
+import headerline from '../../../assects/headerline.svg';
+import share from '../../../assects/share.svg';
+import heart from '../../../assects/heart.svg';
+import minus from '../../../assects/minus.svg';
+import plus from '../../../assects/plus.svg';
+import Swatch01 from '../../../assects/Swatch01.png';
+import Swatch02 from '../../../assects/Swatch02.png';
+import Swatch03 from '../../../assects/Swatch03.png';
+import Swatch04 from '../../../assects/Swatch04.png';
+import star from '../../../assects/star.svg';
+import star1 from '../../../assects/star1.svg';
+
 function Product() {
-    
+
 
     const myState = useSelector((state) => state.Change);
     // const myProductState = useSelector((state) => state.addCart);
@@ -13,17 +29,17 @@ function Product() {
     // let productDetails = {};
     // console.log("",id);
     const [product, setProduct] = useState([]);
-    const  dispatch = useDispatch();
+    const dispatch = useDispatch();
 
-    const getProducts =async()=>{
-        const response= await fetch(`https://fakestoreapi.com/products/${id}`);
-                 const data=await response.json();
-                 setProduct(data);
-     }
-     
-       useEffect(()=>{ 
-             getProducts();
-         },[id]);
+    const getProducts = async () => {
+        const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+        const data = await response.json();
+        setProduct(data);
+    }
+
+    useEffect(() => {
+        getProducts();
+    }, [id]);
 
     // useEffect(() => {
     //     // fetch('https://fakestoreapi.com/products/${id}')
@@ -38,10 +54,10 @@ function Product() {
                     <div className="aem-Grid aem-Grid--12 demo-Grid image-section">
                         <div className="aem-GridColumn aem-GridColumn--default--4 demo-GridColumn sub-images">
                             <div className="sub-images">
-                                <div className="sub-img-style"><img src={product.image}alt="here is product image" /></div>
-                                <div className="sub-img-style" ><img src={product.image}alt="here is product image" /></div>
-                                <div className="sub-img-style"><img src={product.image}alt="here is product image" /></div>
-                                <div className="sub-img-style"><img src={product.image}alt="here is product image" /></div>
+                                <div className="sub-img-style"><img src={product.image} alt="here is product image" /></div>
+                                <div className="sub-img-style" ><img src={product.image} alt="here is product image" /></div>
+                                <div className="sub-img-style"><img src={product.image} alt="here is product image" /></div>
+                                <div className="sub-img-style"><img src={product.image} alt="here is product image" /></div>
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn main-image">
@@ -55,22 +71,22 @@ function Product() {
                         <h2>{product.title}</h2>
                         <p>${product.price}</p>
                         <p>
-                            <img src="../../../logo/star.svg" alt="give rating to product" />
-                            <img src="../../../logo/star.svg" alt="give rating to product" />
-                            <img src="../../../logo/star.svg" alt="give rating to product" />
-                            <img src="../../../logo/star.svg" alt="give rating to product" />
-                            <img src="../../../logo/star1.svg" alt="give rating to product" />(175)
+                            <img src={star} alt="give rating to product" />
+                            <img src={star} alt="give rating to product" />
+                            <img src={star} alt="give rating to product" />
+                            <img src={star} alt="give rating to product" />
+                            <img src={star1} alt="give rating to product" />(175)
                         </p>
                         <p><span>{product.description}</span></p>
                     </div>
-                     <hr /> 
+                    <hr />
                     <div className="product-button">
                         <div className="color-button">
                             <p>Color</p>
-                            <button className="button1"><img src="../../../images/Swatch 01.png" alt="give rating to product" /></button>&nbsp;  &nbsp;
-                            <button className="button2"><img src="../../../images/Swatch 02.png" alt="give rating to product" /></button>&nbsp;  &nbsp;
-                            <button className="button3"><img src="../../../images/Swatch 03.png" alt="give rating to product" /></button>&nbsp;  &nbsp;
-                            <button className="button4"><img src="../../../images/Swatch 04.png" alt="give rating to product" /></button>&nbsp;  &nbsp;
+                            <button className="button1"><img src={Swatch01} alt="give rating to product" /></button>&nbsp;  &nbsp;
+                            <button className="button2"><img src={Swatch02} alt="give rating to product" /></button>&nbsp;  &nbsp;
+                            <button className="button3"><img src={Swatch03} alt="give rating to product" /></button>&nbsp;  &nbsp;
+                            <button className="button4"><img src={Swatch04} alt="give rating to product" /></button>&nbsp;  &nbsp;
                         </div>
                         <div className="size-buttons">
                             <p>Size</p>
@@ -82,16 +98,16 @@ function Product() {
                         </div>
                         <div className="quentity-button">
                             <p>Quantity</p>
-                            <button onClick={() =>dispatch(decNumber())}><img src={"../../../logo/minus-circle.svg"} alt="photo" /></button>
+                            <button onClick={() => dispatch(decNumber())}><img src={minus} alt="photo" /></button>
                             <input type="text" value={myState.count} />
-                            <button onClick={() =>dispatch(incNumber())}><img src={"../../../logo/plus-circle.svg"} alt="photo" /></button>
+                            <button onClick={() => dispatch(incNumber())}><img src={plus} alt="photo" /></button>
                         </div>
                         <div className="add-cart-button">
-                            <button onClick={() =>dispatch(addToCart(product))}>ADD TO CART</button>
+                            <button onClick={() => dispatch(addToCart(product))}>ADD TO CART</button>
                         </div>
                         <div className="shair-buttan">
-                            <button><img src={"../../../logo/heart.svg"} alt="photo" />Save</button>
-                            <button><img src={"../../../logo/share-2.svg"} alt="photo" />Share</button>
+                            <button><img src={heart} alt="photo" />Save</button>
+                            <button><img src={share} alt="photo" />Share</button>
                         </div>
                     </div>
                 </div>
@@ -101,17 +117,17 @@ function Product() {
                     <h1>{product.title}</h1>
                     <h6>Description</h6>
                     <p>{product.description}</p>
-                    <span><img src={"../../../images/max-width_header.svg"} alt="photo" /></span>
+                    <span><img src={headerline} alt="photo" /></span>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColum">
                     <h4>Details</h4>
                     <div className="p-logo">
-                        <li><img src={"../../../images/slack.svg"} alt="photo" />Sweat-wicking</li>
-                        <li><img src={"../../../images/coffee.svg"} alt="photo" />Breathable</li>
+                        <li><img src={slack} alt="photo" />Sweat-wicking</li>
+                        <li><img src={coffee} alt="photo" />Breathable</li>
                     </div>
                     <div className="p-logo2">
-                    <li><img src={"../../../images/feather.svg"} alt="photo" />Lightweight fabric</li>
-                        <li><img src={"../../../images/layers.svg"} alt="photo" />69% nylon, 31% lycra</li>
+                        <li><img src={feather} alt="photo" />Lightweight fabric</li>
+                        <li><img src={layers} alt="photo" />69% nylon, 31% lycra</li>
                     </div>
                 </div>
             </div>

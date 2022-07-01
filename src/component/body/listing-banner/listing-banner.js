@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import '../../../App.css';
 import Pgination from "./pagination";
 import { useNavigate } from 'react-router-dom';
+import heart from '../../../assects/heart.svg';
+import arrowd from '../../../assects/arrowd.svg';
+import arrowup from '../../../assects/arrowup.svg';
+import sliders from '../../../assects/sliders.svg';
 
 
 function ListingBanner(props) {
@@ -44,12 +48,12 @@ function ListingBanner(props) {
                 <div className="filter-result">
                     <ul>
                         <li>
-                            <img src="../../../logo/sliders.svg" alt="give rating to product" />
+                            <img src={sliders} alt="give rating to product" />
                             Filter Results
                         </li>
                         <li>
-                            <img src="../../../images/arrow-up.svg" alt="give rating to product" />
-                            <img src="../../../images/arrow-down.svg" alt="give rating to product" />
+                            <img src={arrowd} />
+                            <img src={arrowup} />
                             Sort Products
                         </li>
                     </ul>
@@ -68,7 +72,7 @@ function ListingBanner(props) {
                             <p>{prod.title}</p>
                             <span>${prod.price}/-</span>
                             <br />
-                            <img src={"../../../logo/heart.svg"} alt="save for leter" />
+                            <img src={heart} alt="save for leter" />
                         </div>
                     );
                 })}
