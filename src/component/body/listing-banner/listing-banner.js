@@ -24,10 +24,11 @@ function ListingBanner(props) {
     }
 
     console.log(props);
-    const onFilterChange = (value) => {
-        console.log(value);
-        if (value) {
-            props.data.sort((a, b) => a.price - b.price)
+    const onFilterChange = (filter) => {
+        console.log(filter.target.value);
+        if (filter.target.value) {
+            props.data.sort((a, b) => a.price - b.price);
+            console.log(props.data);
         }
     }
     const handleOnSubmit = (id) => {
@@ -76,9 +77,9 @@ function ListingBanner(props) {
                         </div>
                     );
                 })}
-                <div>
-                    <Pgination showperpage={showperpage} onPaginationChange={onPaginationChange} />
-                </div>
+            </div>
+            <div className="page-funtion">
+                <Pgination showperpage={showperpage} onPaginationChange={onPaginationChange} />
             </div>
         </div>
     );

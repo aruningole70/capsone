@@ -2,6 +2,7 @@ import '../../App.css';
 import search from '../../assects/search.svg';
 import shoppingbag from '../../assects/shoppingbag.svg';
 import user from '../../assects/user.svg';
+import menu from '../../assects/menu.svg';
 import logo from '../../assects/logo.png';
 // import  search  from '../../assets/images/search.svg';
 import { useNavigate } from 'react-router-dom';
@@ -39,8 +40,8 @@ function Header() {
         </div>
         <div className='mobile-nav'>
             <ul>
-                <li><button><img src={"../../../logo/menu.svg"} /></button></li>
-                <li onClick={homeClick}><img src={"../../../images/logo.png"} /></li>
+                <li><button><img src={menu} /></button></li>
+                <li onClick={homeClick}><img src={logo} /></li>
                 <li><img src={search} /></li>
                 <li onClick={handleClick}><img src={shoppingbag} /></li>
             </ul>
