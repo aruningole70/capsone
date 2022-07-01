@@ -10,9 +10,17 @@ function Categories() {
     .then((res) => res.json())
     .then((data) => setDataCat(data));
   }, []);
+  
+  const onFilterChange = (filter) => {
+    console.log("onfilter", filter);
+    if (filter) {
+      initialDataCat.sort((a, b) => a.price - b.price);
+        console.log(initialDataCat);
+    }
+}
   console.log(initialDataCat)
 
-  return <ListingBanner data={initialDataCat} />
+  return <ListingBanner data={initialDataCat} filterChange={onFilterChange} />
 }
 
 export default Categories;

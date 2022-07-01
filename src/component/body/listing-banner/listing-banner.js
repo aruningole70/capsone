@@ -8,8 +8,14 @@ import arrowup from '../../../assects/arrowup.svg';
 import sliders from '../../../assects/sliders.svg';
 
 
-function ListingBanner(props) {
-
+function ListingBanner({filterChange, data}) {
+    // const [filterChange, setFilterChange] = useState ([])
+    const onFilterSelect = (e) => {
+        console.log('onFilterSelect', filterChange);
+        // window.location.reload(false);
+        filterChange(e.target.value);
+    }
+    console.log("from product",data);
     const navigate = useNavigate();
 
     const [showperpage] = useState(6)
@@ -23,14 +29,6 @@ function ListingBanner(props) {
         // console.log(start, end);
     }
 
-    console.log(props);
-    const onFilterChange = (filter) => {
-        console.log(filter.target.value);
-        if (filter.target.value) {
-            props.data.sort((a, b) => a.price - b.price);
-            console.log(props.data);
-        }
-    }
     const handleOnSubmit = (id) => {
         navigate('/product-detail/' + id);
     };
@@ -41,7 +39,7 @@ function ListingBanner(props) {
                     <p>38 Results</p>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6  aem-GridColumn--phone--hide demo-GridColumn drop-down">
-                    <select name="" id="" onChange={onFilterChange}>
+                    <select name="" id="" onChange={onFilterSelect}>
                         <option value="Sort by list">Sort by list</option>
                         <option value="categiry">Sort by Price</option>
                     </select>
@@ -62,7 +60,7 @@ function ListingBanner(props) {
                 </div>
             </div>
             <div className="aem-Grid aem-Grid--12 demo-Grid">
-                {props.data.slice(pagination.start, pagination.end).map((prod) => {
+                {data.slice(pagination.start, pagination.end).map((prod) => {
                     return (
                         <div onClick={() => handleOnSubmit(prod.id)} className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 demo-GridColumn banner-products" key={prod.id}>
                             <img
