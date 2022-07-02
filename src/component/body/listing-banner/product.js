@@ -7,20 +7,24 @@ function Categories() {
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
-    .then((res) => res.json())
-    .then((data) => setDataCat(data));
+      .then((res) => res.json())
+      .then((data) => setDataCat(data));
   }, []);
-  
-  const onFilterChange = (filter) => {
-    console.log("onfilter", filter);
-    if (filter) {
-      initialDataCat.sort((a, b) => a.price - b.price);
-        console.log(initialDataCat);
-    }
-}
-  console.log(initialDataCat)
+  //  const [onfilterChange, setFilterChange] = useState ([])
+  const [sort, setSort] = useState()
+  const onfilterChange = (filter) => {
 
-  return <ListingBanner data={initialDataCat} filterChange={onFilterChange} />
+    console.log("onfilter", sort);
+    if (filter) {
+      const result = initialDataCat.sort((a, b) => a.price - b.price);
+      // console.log(initialDataCat);
+      return setSort(result);
+      
+    }
+  }
+  // console.log(sort);
+
+  return <ListingBanner data={initialDataCat} filterChange={onfilterChange} />
 }
 
 export default Categories;

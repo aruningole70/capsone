@@ -8,14 +8,18 @@ import arrowup from '../../../assects/arrowup.svg';
 import sliders from '../../../assects/sliders.svg';
 
 
-function ListingBanner({filterChange, data}) {
-    // const [filterChange, setFilterChange] = useState ([])
+function ListingBanner({ filterChange, data }) {
+
+    // const [sort , setSort] = useState (filterChange);
+    
     const onFilterSelect = (e) => {
         console.log('onFilterSelect', filterChange);
         // window.location.reload(false);
         filterChange(e.target.value);
     }
-    console.log("from product",data);
+
+
+    console.log("from product", data);
     const navigate = useNavigate();
 
     const [showperpage] = useState(6)
@@ -41,7 +45,7 @@ function ListingBanner({filterChange, data}) {
                 <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6  aem-GridColumn--phone--hide demo-GridColumn drop-down">
                     <select name="" id="" onChange={onFilterSelect}>
                         <option value="Sort by list">Sort by list</option>
-                        <option value="categiry">Sort by Price</option>
+                        <option  value="categiry">Sort by Price</option>
                     </select>
                 </div>
                 <div className="filter-result">
