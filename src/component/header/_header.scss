@@ -1,50 +1,130 @@
-.list-item{
+.main-nav{
+    background-color: #1363DF;
+    color: #FFFFFF;
+}
+.list-item {
     text-align: center;
     padding-top: 1%;
     display: flex;
-   ul{
-    justify-content: space-around;
-    li{
-        display: inline;
-        padding-left: 40px;
-        position: relative;
-        list-style-type: none;
-        a{
-        text-decoration: none;
-        color: black;
-        }
 
+    ul {
+        justify-content: space-around;
+
+        li {
+            display: inline;
+            padding-left: 40px;
+            position: relative;
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: #FFFFFF;
+            }
+
+        }
     }
-   }
 }
-.list-item-icon{
+
+.list-item-icon {
     text-align: right;
     padding-top: 1%;
-    ul{
-        li{
+
+    ul {
+        li {
             display: inline;
             list-style-type: none;
             padding-right: 25px;
         }
-       }
+    }
 }
+
+.mobile-menu {
+    text-align: left;
+    color: black;
+
+    ul {
+        li {
+            list-style-type: none;
+            padding-left: 20px;
+            padding-top: 2%;
+
+
+            a {
+
+                font: normal normal normal 16px/24px Muli;
+                letter-spacing: 0px;
+                color: #172026;
+                opacity: 1;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.cart-icon {
+    display: flex;
+    text-align: end;
+    margin-right: 2rem;
+    align-items: center;
+    position: relative;
+    justify-content: flex-end;
+
+    p {
+        position: absolute;
+        width: 4rem;
+        right: -1.2rem;
+        top: 0.9rem;
+        font-size: 1rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--main-color);
+    }
+}
+
 @media (max-width:998px) {
-    .main-nav{
+    .main-nav {
         display: none;
     }
 }
-.mobile-nav{
-    ul{
+
+.badge{
+    border-radius: 0.27rem;
+}
+.rounded-pill{
+    border-radius: 50rem!important;
+}
+.badge-notification{
+    position: absolute;
+    font-size: .6rem;
+    margin-top: -0.1rem;
+    margin-left: -0.5rem;
+    padding: 0.2em 0.45em;
+}
+.bg-danger{
+    background-color: black!important;
+    color: #FFFFFF;
+}
+.mobile-nav {
+    background-color: blue;
+    ul {
         display: flex;
         padding-top: 2%;
         justify-content: space-between;
-        li{
+
+        li {
+            button {
+                border: none;
+                background: none;
+            }
+
             list-style-type: none;
         }
     }
 }
+
 @media (min-width:998px) {
-    .mobile-nav{
+    .mobile-nav {
         display: none;
     }
 }
