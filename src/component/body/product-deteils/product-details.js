@@ -49,7 +49,6 @@ function Product() {
       ];
     const imagechage = (img) => {
         image = img;
-        console.log("image",image);
     }
     
    
@@ -74,7 +73,7 @@ function Product() {
                         <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn main-image">
                         <SimpleImageSlider
                             width={450}
-                            height={650}
+                            height={600}
                             images={images}
                             showBullets={true}
                             showNavs={true}
