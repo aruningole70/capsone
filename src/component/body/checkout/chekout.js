@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../../../App.css';
+import csquare from '../../../assects/csquare.svg';
 
 const Checkout = () => {
     const [inputdata, setInputData] = useState({
@@ -20,10 +21,10 @@ const Checkout = () => {
         const name = a.target.name;
         const value = a.target.value;
         console.log(inputdata);
-        setInputData({ ...inputdata, [name] : value })
+        setInputData({ ...inputdata, [name]: value })
     }
- let containfo = false;
-    const handelSubmite = () =>{
+    let containfo = false;
+    const handelSubmite = () => {
         console.log(inputdata);
         containfo = true;
     }
@@ -134,6 +135,55 @@ const Checkout = () => {
                             </div>
                         </div>
                     </div>
+                </div>
+                <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn shiping-address siping-by">
+                    <h1>2. Shipping Method</h1>
+                    <div className="siping-by">
+                        <input type="radio" id="first-redio" name="first-redio" value="first-redio" />
+                        <label for="first-redio">Standard Shipping (4-8 business days via USPS) FREE</label><br />
+                        <input type="radio" id="second-redio" name="second-redio" value="second-redio" />
+                        <label for="second-redio">Express Delivery (2-5 business days via USPS) $17.95</label><br />
+                        <input type="radio" id="third-redio" name="third-redio" value="third-redio" />
+                        <label for="third-redio">Next Day Delivery (Next business days via FedEx) $53.61</label><br />
+                    </div>
+                    <br />
+                    <button className="continue" onClick={handelSubmite}>CONTINUE TO SHIPPING METHOD</button>
+                </div>
+                <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn shiping-address">
+                    <h2>3. Payment Information</h2>
+                    <div className="card-details">
+                        <input type="radio" id="card" name="card" value="card" />
+                        <label for="card">Credit Card</label><br />
+                        <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn card-info">
+                            <label htmlFor="card-name">Name on Card</label><br />
+                            <input type="text" value={""}
+                                name="card-name" id="card-name" placeholder="" /><br/>
+                            <label htmlFor="card-no">Credit Card Number</label><br />
+                            <input type="text" value={""}
+                                name="card-no" id="card-no" placeholder="" />
+                            <div className="date-cvv">
+                              <div>
+                              <label htmlFor="exp-date">Expiration Date</label><br />
+                            <input type="text" value={""}
+                                name="exp-date" id="exp-date" placeholder="" />
+                              </div>
+                              <div className="cvv">
+                              <label htmlFor="cvv">CVV</label><br />
+                            <input type="text" value={""}
+                                name="cvv" id="cvv" placeholder="" />
+                              </div>
+                          
+                                </div>
+                        </div>
+                        <br/>
+                        <img src={csquare} alt="square box" /><p>Billing address same as shipping address</p>
+                        <hr/>
+                        <input type="radio" id="PayPal" name="PayPal" value="PayPal" />
+                        <label for="PayPal">PayPal</label><br />
+                        <hr/>
+                    </div>
+                    <br/>
+                    <button className="continue" onClick={handelSubmite}>CONTINUE TO SHIPPING METHOD</button>
                 </div>
             </div>
             {/* <div className={containfo ? 'contact1' : 'contact2'}>
