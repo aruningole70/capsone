@@ -15,22 +15,7 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
 
     const [isSelected, setisSelected] = useState(false);
 
-    // const [filterdata, setFilterdata] = useState(data);
-
-    // const filterresult = (catitem) => {
-    //    const data1 = data.filter((curdata) => {
-    //         return curdata.category === catitem;
-    //     })
-    //     data = data1;
-    //     console.log(data);
-    //     // setFilterdata(data);
-    // }
-    // const onCatagoryChange = (e) => {
-    //     console.log(e.target.value);
-    //     filterresult(e.target.value);
-
-    // }
-
+    const navigate = useNavigate ()
     const showHidefilter = (e) => {
         switch (e) {
             case "showHidefilter":
@@ -40,8 +25,6 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
     const onFilterSelect = (e) => {
         filterChange(e.target.value === "Sort by Price");
     }
-    const navigate = useNavigate();
-
     const [showperpage] = useState(6)
     const [pagination, stePegination] = useState({
         start: 0,

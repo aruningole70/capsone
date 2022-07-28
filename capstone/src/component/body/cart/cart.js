@@ -9,8 +9,17 @@ import heart from '../../../assects/heart.svg';
 import lock from '../../../assects/lock.svg';
 import { incCart, decCart, Remove } from '../../../redux/acion/index';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from "react-router-dom";
 function Cart() {
     const dispatch = useDispatch();
+
+    const navigate = useNavigate()
+
+    const checkClick = () => {
+
+        navigate('/checkout');
+    };
+
     const updatedState = useSelector((state) => state.Change);
     if (updatedState.count === 0) {
         console.log(localStorage.getItem("products"));
@@ -109,7 +118,7 @@ function Cart() {
                             </div>
                         </div>
                         <div className="cart-button">
-                            <div className="chekout"><button> <img src={lock} alt="here is lock logo" />CHECKOUT</button></div>
+                            <div className="chekout"><button onClick={checkClick}> <img src={lock} alt="here is lock logo" />CHECKOUT</button></div>
                             <div className="paypal"><button className="imp-btn" style={{ backgroundImage: "url(PP_BTN@2x.png)" }}></button></div>
                         </div>
                     </div>
