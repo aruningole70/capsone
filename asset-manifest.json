@@ -1,16 +1,13 @@
 {
   "files": {
-    "main.css": "/capstone/static/css/main.6b0bb704.css",
-    "main.js": "/capstone/static/js/main.b4dbd92c.js",
+    "main.css": "/capstone/static/css/main.5d8f9aad.css",
+    "main.js": "/capstone/static/js/main.65bf83fa.js",
     "static/js/787.3ecd7fac.chunk.js": "/capstone/static/js/787.3ecd7fac.chunk.js",
     "static/media/hero1.png": "/capstone/static/media/hero1.e381db1c14abfc717006.png",
     "static/media/hero2.png": "/capstone/static/media/hero2.b059079456a38c25ef3e.png",
     "static/media/image.png": "/capstone/static/media/image.33999102e9d1828ff8f6.png",
-    "static/media/capstone1.png": "/capstone/static/media/capstone1.033d04dfb803722c3cf3.png",
-    "static/media/capstone2.png": "/capstone/static/media/capstone2.e8e8b9bd62d04fa1d3f4.png",
     "static/media/hero.png": "/capstone/static/media/hero.481a0719b1da5e399071.png",
     "static/media/woman.png": "/capstone/static/media/woman.eac6c4a412e33cd30916.png",
-    "static/media/capstone3.png": "/capstone/static/media/capstone3.44a45d6d8d4261a0d7e8.png",
     "static/media/slack.svg": "/capstone/static/media/slack.c960e95535cd9b3149ccf0f0830ec002.svg",
     "static/media/sliders.svg": "/capstone/static/media/sliders.0bc0acedaae026b86f71690af143e99e.svg",
     "static/media/share.svg": "/capstone/static/media/share.c9452d8d0a01f15f7b30c66f52b97baa.svg",
@@ -26,6 +23,7 @@
     "static/media/edit.svg": "/capstone/static/media/edit.6dabe32c9eab41f113607d77eb4aa0f0.svg",
     "static/media/search.svg": "/capstone/static/media/search.87aaa644df53ded7ffcc15bbb745168d.svg",
     "static/media/arrowup.svg": "/capstone/static/media/arrowup.bffb5a388e9ce654e32b9665d1dbed6d.svg",
+    "static/media/csquare.svg": "/capstone/static/media/csquare.f5ac8fcb82a0089b7bb09fa170739ecc.svg",
     "static/media/user.svg": "/capstone/static/media/user.684b683431abfb6b19b6b990e758bde1.svg",
     "static/media/lock.svg": "/capstone/static/media/lock.64439d453537a96d8d81d9817f2dfef8.svg",
     "static/media/minus.svg": "/capstone/static/media/minus.e934335b664aeca8f3d3968f708b5a06.svg",
@@ -40,12 +38,12 @@
     "static/media/width.svg": "/capstone/static/media/width.b30ba3a34036ac1b5ede830b6541f16f.svg",
     "static/media/header2.svg": "/capstone/static/media/header2.83eff1d6365d4bee07af8f1abc519672.svg",
     "static/media/headerline.svg": "/capstone/static/media/headerline.2d056cfe92516b65f8fa9410acada2c3.svg",
-    "main.6b0bb704.css.map": "/capstone/static/css/main.6b0bb704.css.map",
-    "main.b4dbd92c.js.map": "/capstone/static/js/main.b4dbd92c.js.map",
+    "main.5d8f9aad.css.map": "/capstone/static/css/main.5d8f9aad.css.map",
+    "main.65bf83fa.js.map": "/capstone/static/js/main.65bf83fa.js.map",
     "787.3ecd7fac.chunk.js.map": "/capstone/static/js/787.3ecd7fac.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6b0bb704.css",
-    "static/js/main.b4dbd92c.js"
+    "static/css/main.5d8f9aad.css",
+    "static/js/main.65bf83fa.js"
   ]
 }
