@@ -1,10 +1,7 @@
 import React from "react";
 import '../../App.css';
-import capstone1 from '../../assects/capstone1.png';
 import woman from '../../assects/woman.png';
 import width from '../../assects/width.svg';
-import capstone2 from '../../assects/capstone2.png';
-import capstone3 from '../../assects/capstone3.png';
 import hero1 from '../../assects/hero1.png';
 import hero2 from '../../assects/hero2.png';
 import image from '../../assects/image.png';
@@ -12,6 +9,12 @@ import { useNavigate } from "react-router-dom";
 
 const Home = () => {
 
+
+    // const getCatagory = async () => {
+    //     const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+    //     const data = await response.json();
+       
+    // }
     const navigate = useNavigate ();
     const handleClick = () => {
         navigate('/body');

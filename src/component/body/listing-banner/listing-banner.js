@@ -9,31 +9,22 @@ import sliders from '../../../assects/sliders.svg';
 import MobSideBar from './mob-sidebr';
 
 
-const ListingBanner = ({ filterChange, data, loading }) => {
+const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
 
     const [filter, setFilter] = useState(false);
 
-    const [filterdata, setFilterdata] = useState(data);
+    const [isSelected, setisSelected] = useState(false);
 
-    const filterresult = (catitem) => {
-        const result = data.filter((curdata) => {
-            return curdata.Category === catitem;
-        })
-        setFilterdata(result);
-    }
-
+    const navigate = useNavigate ()
     const showHidefilter = (e) => {
         switch (e) {
             case "showHidefilter":
                 setFilter(!filter);
         }
     }
-
     const onFilterSelect = (e) => {
         filterChange(e.target.value === "Sort by Price");
     }
-    const navigate = useNavigate();
-
     const [showperpage] = useState(6)
     const [pagination, stePegination] = useState({
         start: 0,
@@ -60,17 +51,26 @@ const ListingBanner = ({ filterChange, data, loading }) => {
                         <hr />
                         <h2>Categories</h2>
                         <br />
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Jwelary" />
-                        <label for="Jwelary"> Jwelary</label>
-                        <br />
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Electronics" />
-                        <label for="Electronics"> Electronics</label>
-                        <br />
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Men’s clothing" />
-                        <label for="Men’s clothing">Men’s clothing</label>
-                        <br />
-                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Woman's clothing" />
-                        <label for="Woman's clothing">Woman's clothing</label>
+                        <input type="checkbox" id='chk1-label' aria-label="checkbox" onClick={() => {
+                            setisSelected(!isSelected);
+                            filterProduct("jewelery")
+                        }} />
+                        <label htmlFor="chk1-label"> Jewellery</label><br />
+                        <input type="checkbox" id='chk2-label' aria-label="checkbox" onClick={() => {
+                            setisSelected(!isSelected);
+                            filterProduct("electronics")
+                        }} />
+                        <label htmlFor="chk2-label">  Electronics</label><br />
+                        <input type="checkbox" id='chk3-label' aria-label="checkbox" onClick={() => {
+                            setisSelected(!isSelected);
+                            filterProduct("men's clothing")
+                        }} />
+                        <label htmlFor='chk3-label'>  Men’s Clothing</label><br />
+                        <input type="checkbox" id='chk4-label' aria-label="checkbox" onClick={() => {
+                            setisSelected(!isSelected);
+                            filterProduct("women's clothing")
+                        }} />
+                        <label htmlFor='chk4-label'>Women’s Clothing</label>
                         <br />
                     </div>
                 </div>

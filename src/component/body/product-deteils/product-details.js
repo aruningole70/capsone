@@ -19,6 +19,7 @@ import Swatch03 from '../../../assects/Swatch03.png';
 import Swatch04 from '../../../assects/Swatch04.png';
 import star from '../../../assects/star.svg';
 import star1 from '../../../assects/star1.svg';
+import SimpleImageSlider from "react-simple-image-slider";
 
 function Product() {
     const [isloading , setIsloading] = useState(true);
@@ -38,6 +39,14 @@ function Product() {
         getProducts();
     }, [id]);
 
+    const images = [
+        { url: product.image },
+        { url: product.image },
+        { url: product.image },
+        { url: product.image },
+        { url: product.image }
+    
+      ];
     const imagechage = (img) => {
         image = img;
         console.log("image",image);
@@ -59,8 +68,17 @@ function Product() {
                                 <div className="sub-img-style" onClick={imagechage(product.image)}><img src={product.image} alt="here is product image" /></div>
                             </div>
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn main-image">
+                        {/* <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn main-image">
                             <img src={image} alt="here is product image" />
+                        </div> */}
+                        <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn main-image">
+                        <SimpleImageSlider
+                            width={450}
+                            height={650}
+                            images={images}
+                            showBullets={true}
+                            showNavs={true}
+                          />
                         </div>
                     </div>
                 </div>
