@@ -7,6 +7,7 @@ import Cart from './component/body/cart/cart';
 import Product from './component/body/product-deteils/product-details';
 import Home from './component/home/home';
 import Checkout from './component/body/checkout/chekout';
+import PlaceOrder from './component/body/placeorder/placeorder';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/product-detail/:id" element={<Product />}/>
         <Route exact path="/cart" element={<Cart />}/>
         <Route exact path="/checkout" element={<Checkout />}/>
+        <Route exact path="/placeorder" element={<PlaceOrder />}/>
         </Route>
       </Routes>
       <hr />

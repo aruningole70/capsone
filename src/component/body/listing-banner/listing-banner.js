@@ -7,6 +7,8 @@ import arrowd from '../../../assects/arrowd.svg';
 import arrowup from '../../../assects/arrowup.svg';
 import sliders from '../../../assects/sliders.svg';
 import MobSideBar from './mob-sidebr';
+// import { useEffect } from "react";
+// import Sidebar from "./filter";
 
 
 const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
@@ -38,6 +40,22 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
 
         navigate('/product-detail/' + id);
     };
+    // const getCategoryData = () => {
+    //     fetch("https://fakestoreapi.com/products/categories")
+    //         .then(res => {
+    //             return res.json()
+    //         })
+    //         .then(data => {
+    //             setData(data);
+
+    //         })
+    //     console.log(data)
+    // }
+
+    // useEffect(() => {
+    //     getCategoryData()
+    // }, []);
+
     return (
         <div>
             <div className="mobile-sidebar">
@@ -74,6 +92,11 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
                         <br />
                     </div>
                 </div>
+                
+                {/* <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn">
+                    <Sidebar filterProduct={filterProduct} initialDataCat={initialDataCat} />
+                </div> */}
+                
                 <div className="aem-GridColumn aem-GridColumn--default--9 demo-GridColumn">
                     <div className="aem-Grid aem-Grid--12 demo-Grid">
                         <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--3 aem-GridColumn--phone--hide demo-GridColumn">

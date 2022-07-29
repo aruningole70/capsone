@@ -13,7 +13,7 @@ import { useNavigate } from "react-router-dom";
 function Cart() {
     const dispatch = useDispatch();
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const checkClick = () => {
 
@@ -27,9 +27,12 @@ function Cart() {
         updatedState.count = 1;
     }
     let subTotal = 0;
-    for (let i = 0; i < updatedState.products.length; i++) {
-        subTotal = subTotal + (updatedState.products[i].price * updatedState.products[i].count);
+    if(updatedState.products){
+        for (let i = 0; i < updatedState.products.length; i++) {
+            subTotal = subTotal + (updatedState.products[i].price * updatedState.products[i].count);
+        } 
     }
+    
     let estTotal = 0;
     for (let i = 0; i < subTotal; i++) {
         estTotal = subTotal - (77.60 + 100 + 23.28);
@@ -41,7 +44,7 @@ function Cart() {
             </header>
             <div className="aem-Grid aem-Grid--12 demo-Grid cart-section">
                 <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn ">
-                    {updatedState.products.map((prod) => {
+                    { updatedState.products && updatedState.products.map((prod) => {
                         return (
                             <div className="aem-Grid aem-Grid--12 aem-Grid--tablet--6 aem-Grid--phone--1 demo-Grid cart-items ">
                                 <div className="aem-GridColumn aem-GridColumn--default--3 aem-Grid--tablet--6 aem-Grid--phone--1  demo-GridColumn cart-img">

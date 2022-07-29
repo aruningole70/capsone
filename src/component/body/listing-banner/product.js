@@ -12,7 +12,7 @@ function Categories() {
 
   const [loading, setLoading] = useState(true);
 
-  
+  // List=[];
 
   const [products, setProducts] = useState([]);
   
@@ -25,7 +25,7 @@ function Categories() {
         setDataCat(data);
         setLoading(false);
         setProducts(data);
-
+// this.list=data;
       })
   }, []);
   

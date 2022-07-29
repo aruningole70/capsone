@@ -12,8 +12,10 @@ const Header = () => {
     const getdata = useSelector ((state) => state.Change);
     console.log(getdata);
     let subTotal = 0;
-    for (let i = 0; i < getdata.products.length; i++) {
-        subTotal = subTotal + getdata.products[i].count;
+    if(getdata.products){
+        for (let i = 0; i < getdata.products.length; i++) {
+            subTotal = subTotal + getdata.products[i].count;
+        }
     }
     console.log("subTotal",subTotal);
     const [showHideComp1, setShowHideComp1] = useState(false);
@@ -21,6 +23,8 @@ const Header = () => {
         switch (e) {
             case "showHideComp1":
                 setShowHideComp1(!showHideComp1);
+                default : 
+                setShowHideComp1(showHideComp1); 
         }
     }
     const navigate = useNavigate();

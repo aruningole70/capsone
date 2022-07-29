@@ -1,16 +1,22 @@
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
 import '../../../App.css';
 import csquare from '../../../assects/csquare.svg';
 import edit1 from '../../../assects/edit1.svg';
+import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
     const [redio, setRedio] = useState();
 
+    const Getresiodata = (x) => {
+        setRedio(x.target.value);
+    }
     const [show, setShow] = useState(true);
     const [showdiv, setShowDiv] = useState(false);
     const handlechange = () => {
         setShow(!show);
         setShowDiv(!showdiv);
+        localStorage.setItem("inputdatainfo",JSON.stringify(inputdata));
     }
     const editdata = () => {
         setShow(!show);
@@ -21,6 +27,7 @@ const Checkout = () => {
     const Rediohandal = () => {
         setShiping(!shiping);
         setEditShiping(!editshiping);
+        localStorage.setItem("redioinfo",JSON.stringify(redio));
     }
 
     const EditRediohandal = () => {
@@ -32,6 +39,7 @@ const Checkout = () => {
     const Handalcard = () => {
         setCarddata(!carddata);
         setEditCarddata(!editcarddata);
+        localStorage.setItem("paydatainfo",JSON.stringify(paydata));
     }
     const EditHandalcard = () => {
         setCarddata(!carddata);
@@ -63,6 +71,7 @@ const Checkout = () => {
         const value = a.target.value;
         console.log(paydata);
         setPayData({ ...paydata, [name]: value })
+
     }
 
     const userData = (a) => {
@@ -70,6 +79,18 @@ const Checkout = () => {
         const value = a.target.value;
         console.log(inputdata);
         setInputData({ ...inputdata, [name]: value })
+    }
+
+    const navigate = useNavigate();
+
+    const PlaceOrder = () => {
+        navigate('/placeorder');
+    };
+    const Getcarddata = useSelector((state) => state.Change);
+    if (Getcarddata.count === 0) {
+        console.log(localStorage.getItem("products"));
+        Getcarddata.products = JSON.parse(localStorage.getItem("products"));
+        Getcarddata.count = 1;
     }
     return (
         <div>
@@ -161,14 +182,11 @@ const Checkout = () => {
                                 <p>{inputdata.Phone}</p>
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--default--4 demo-GridColumn ">
-                                <span><p>{inputdata.Country}</p></span>
-                                <span><p>{inputdata.FName}</p></span>
-                                <span><p>{inputdata.LName}</p></span>
-                                <span><p>{inputdata.Address}</p></span>
-                                <span><p>{inputdata.Address2}</p></span>
-                                <span><p>{inputdata.City}</p></span>
+                                {/* <span><p>{inputdata.Country}</p></span> */}
+                                <span><p>{inputdata.FName} {inputdata.LName}</p></span>
+                                <span><p>{inputdata.Address} {inputdata.Address2}</p></span>
+                                <span><p>{inputdata.City} {inputdata.ZIP}</p></span>
                                 <span><p>{inputdata.State}</p></span>
-                                <span><p>{inputdata.ZIP}</p></span>
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--default--4 demo-GridColumn edit-button">
                                 <button onClick={editdata}><img src={edit1} alt="pencile" /> Edit</button>
@@ -178,12 +196,12 @@ const Checkout = () => {
                     {shiping && <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn shiping-address siping-by">
                         <h1>2. Shipping Method</h1>
                         <div className="siping-by">
-                            <input type="radio" id="first-redio" name="first-redio" value="Standard Shipping (4-8 business days via USPS) FREE" onChange={e => setRedio(e.target.value)} />
-                            <label for="first-redio">Standard Shipping (4-8 business days via USPS) FREE</label><br />
-                            <input type="radio" id="second-redio" name="first-redio" value="Express Delivery (2-5 business days via USPS) $17.95" onChange={e => setRedio(e.target.value)} />
-                            <label for="redio2">Express Delivery (2-5 business days via USPS) $17.95</label><br />
-                            <input type="radio" id="third-redio" name="first-redio" value="Next Day Delivery (Next business days via FedEx) $53.61" onChange={e => setRedio(e.target.value)} />
-                            <label for="redio3">Next Day Delivery (Next business days via FedEx) $53.61</label><br />
+                            <input type="radio" id="first-redio" name="first-redio" value="Standard Shipping (4-8 business days via USPS) FREE" onChange={Getresiodata} />
+                            <label htmlFor="first-redio">Standard Shipping (4-8 business days via USPS) FREE</label><br />
+                            <input type="radio" id="second-redio" name="first-redio" value="Express Delivery (2-5 business days via USPS) $17.95" onChange={Getresiodata} />
+                            <label htmlFor="redio2">Express Delivery (2-5 business days via USPS) $17.95</label><br />
+                            <input type="radio" id="third-redio" name="first-redio" value="Next Day Delivery (Next business days via FedEx) $53.61" onChange={Getresiodata} />
+                            <label htmlFor="redio3">Next Day Delivery (Next business days via FedEx) $53.61</label><br />
                         </div>
                         <br />
                         <button className="continue" onClick={Rediohandal} >CONTINUE TO SHIPPING METHOD</button>
@@ -203,7 +221,7 @@ const Checkout = () => {
                         <h2>3. Payment Information</h2>
                         <div className="card-details">
                             <input type="radio" id="card" name="card" value="card" />
-                            <label for="card">Credit Card</label><br />
+                            <label htmlFor="card">Credit Card</label><br />
                             <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn card-info">
                                 <label htmlFor="Cname">Name on Card</label><br />
                                 <input type="text" value={paydata.Cname}
@@ -232,7 +250,7 @@ const Checkout = () => {
                             <img src={csquare} alt="square box" /><p>Billing address same as shipping address</p>
                             <hr />
                             <input type="radio" id="PayPal" name="PayPal" value="PayPal" />
-                            <label for="PayPal">PayPal</label><br />
+                            <label htmlFor="PayPal">PayPal</label><br />
                             <hr />
                         </div>
                         <br />
@@ -243,13 +261,44 @@ const Checkout = () => {
                             <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn">
                                 <h6>Payment Information</h6>
                                 <p>Credit Card</p>
-                        <p>Visa ending in {paydata.expdate} </p>
+                                <p>Visa ending in {paydata.expdate} </p>
                             </div>
                             <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn edit-button">
-                            <button onClick={EditHandalcard}><img src={edit1} alt="pencile" /> Edit</button>
+                                <button onClick={EditHandalcard}><img src={edit1} alt="pencile" /> Edit</button>
                             </div>
                         </div>
                     </div>}
+                    <br />
+                    <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn">
+                        <div className="aem-Grid aem-Grid--12 demo-Grid orderd-product">
+                            { Getcarddata.products && Getcarddata.products.map((carddata) => {
+                                return (
+                                    <>
+                                        <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn demo-GridColumn--separator">
+                                            <div className="aem-Grid aem-Grid--12 demo-Grid card-product">
+                                                <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn demo-GridColumn--separator ">
+                                                    <img src={carddata.image} alt="photo" />
+                                                </div>
+                                                <div className="aem-GridColumn aem-GridColumn--default--9 demo-GridColumn demo-GridColumn--separator ">
+                                                    <span><h6>{carddata.title}</h6></span>
+                                                    <ul>
+                                                        <li>Size: Medium</li>
+                                                        <li>Color: Storm</li>
+                                                        <li>Quantity:{carddata.count}</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </>
+                                );
+
+                            })};
+                        </div>
+                        <br/>
+                        <div className="aem-Grid aem-Grid--12 demo-Grid place-order-button">
+                            <button onClick={PlaceOrder}>PLACE ORDER</button>
+                        </div>
+                    </div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn">
                     {show && <div className=" aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn sign-in">
@@ -281,6 +330,7 @@ const Checkout = () => {
                     </div>
                 </div>
             </div>
+            {/* <PlaceOrder inputdata={inputdata}  /> */}
         </div>
     );
 }
