@@ -85,8 +85,11 @@
 .discount-box {
     background: #47B5FF 0% 0% no-repeat padding-box;
     border: 1px solid #D1D3D6;
-    width: 376px;
-    height: 181px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 440px;
+    height: 351px;
     border-radius: 2px;
     opacity: 1;
 

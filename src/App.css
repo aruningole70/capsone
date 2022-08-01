@@ -6474,8 +6474,18 @@
 .discount-box {
   background: #47B5FF 0% 0% no-repeat padding-box;
   border: 1px solid #D1D3D6;
-  width: 376px;
-  height: 181px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 440px;
+  height: 351px;
   border-radius: 2px;
   opacity: 1;
 }

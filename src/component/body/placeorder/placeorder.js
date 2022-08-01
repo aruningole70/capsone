@@ -54,7 +54,7 @@ const PlaceOrder = ({ }) => {
                             <p>Visa ending in {cardlocaldata.expdate} </p>
                         </div>
                     </div>
-                    <di className="aem-Grid aem-Grid--12 demo-Grid">
+                    <div className="aem-Grid aem-Grid--12 demo-Grid">
                         {Getcarddata.products && Getcarddata.products.map((carddatalocal) => {
                             return (
                                 <>
@@ -77,14 +77,14 @@ const PlaceOrder = ({ }) => {
                             );
 
                         })};
-                    </di>
+                    </div>
                     <div className="aem-Grid aem-Grid--12 demo-Grid order-info">
                         <p>You will also receive an email with the details and we will let you know when your order has shipped.</p>
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore <br /> magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. For assistance call <br /> Support at 1-800-867-5309, M - F, 9am - 8pm EST.</p>
                     </div>
                 </div>
                 <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--hide  demo-GridColumn demo-GridColumn--separator discount-box">
-                    <h4>Give us a follow to SAVE 20% on your next order.</h4>
+                    <h4>Give us a follow <br/> to SAVE 20% <br/>on your next order.</h4>
                     <div className="media-icon">
                         <ul>
                             <li><img src={instagram1} /></li>
