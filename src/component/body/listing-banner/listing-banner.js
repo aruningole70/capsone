@@ -62,7 +62,7 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
                 {filter && <MobSideBar />}
             </div>
             <div className="aem-Grid aem-Grid--12 demo-Grid">
-                <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn filtertion">
+                <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--hide demo-GridColumn filtertion">
                     <h1>Clothing / Women’s / Outerwear</h1>
                     <div className="filter">
                         <h2>Filter</h2>

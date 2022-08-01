@@ -1,5 +1,5 @@
 .main-image {
-    width: 80%;
+    width: 100%;
 }
 
 .sub-images {
@@ -22,6 +22,12 @@
         li {
             list-style-type: none;
         }
+        // position: absolute;
+        // transform: translate();
+        // left: 20px;
+        // font-size: 40px;
+        // z-index: 1;
+        // cursor: pointer;
     }
 }
 .p-logo2 {
@@ -177,8 +183,23 @@
         opacity: 1;
     }
 }
+.prdouct-discreiption-box{
+    img{
+        width: 100%;
+    }
+}
 @media (max-widht: 786px) {
     .sub-image{
         display: none;
-    }
+    
+   }
 }
+// .dot-cotainer-style{
+//     display: flex;
+//     justify-content: center;
+// }
+// .dot-style{
+//     margin: 0 3px;
+//     cursor: pointer;
+//     font-size: 20px;
+// }

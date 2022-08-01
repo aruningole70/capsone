@@ -27,9 +27,99 @@
         height: 20px;
     }
 }
+.banner-bottom{
+    width: 102px;
+    height: 8px;
+    background-color: blue;
+}
 @media ((max-width: 768px)) {
     .brand-box{
         margin-top: -10%;
-    margin-left: 25%
+        margin-left: 25%
     }
 }
+// .banner{
+//     display: flex;
+   
+
+
+//     img
+//     {
+//        padding: 1rem 1rem 1rem 0px;
+//        flex: 2;
+//        width: 83%;
+      
+        
+//     }
+// }
+// .banner-left
+// {
+//     // @extend .display-xl-48-dekstop-only ;
+//     position: relative;
+//     text-align: center;
+//     color: white;
+    
+//     padding: 1em 1em 1em 1em;
+//     flex: 1;
+//     background-color: black;
+
+//     // h1{
+//     //     @extend .display-xl-48-dekstop-only ;
+       
+    
+      
+//     // }
+  
+// }
+// .banner-bottom
+// {
+
+//     // @extend .display-xl-48-dekstop-only ;
+//     // position: absolute;
+//     margin: auto;
+//     height: 0.5rem;
+    
+//     width: 10rem;
+//     background-color:  blue;
+//     border-radius: 0.25rem;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     bottom: 25%
+
+
+
+// }
+// .banner{
+//     position: relative;
+//     flex-direction: column-reverse;
+
+
+//     .img{
+//         padding: 1em 1em 0em 1em;
+//         margin-bottom: 5em;
+//     }
+// }
+
+
+
+// .banner-left{
+//     padding: 1em;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translateX(-50%);
+
+//     margin: auto;
+
+//     width: 75%;
+
+//     h1{
+//        font-size: 2rem;
+//        color: white;
+//         // color: $white;
+
+//         padding: 0 0 1em 0;
+//     }
+    
+   
+// }

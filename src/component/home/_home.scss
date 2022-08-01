@@ -47,3 +47,34 @@
         width: 100%;
     }
 }
+.categories-main{
+    position: relative;
+    bottom: 3rem;
+    background-color: white;
+   .banner-mid{
+    padding-right: 1rem;
+   }
+}
+.category-img img{
+    width: 100%;
+    height: 250px;
+    
+   }
+
+.category-shop{
+    
+    background-color: #1B252CD9;
+    color: white;
+    position: relative;
+    bottom: 3rem;
+    height: 5.5rem;
+    border-bottom: 5px solid blue;
+    // h5{
+    //     // @extend .display-m-24-;
+    // }
+    // p{
+    //     // @extend .regular-heading-m-16-;
+    // }
+  
+ 
+ }

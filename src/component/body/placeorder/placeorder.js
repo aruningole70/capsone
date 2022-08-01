@@ -32,10 +32,10 @@ const PlaceOrder = ({ }) => {
         <>
             <div className="aem-Grid aem-Grid--12 demo-Grid order-page">
                 <h1>Order Successful!</h1>
-                <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn demo-GridColumn--separator">
+                <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--tablet--8 aem-GridColumn--phone--12 demo-GridColumn demo-GridColumn--separator">
                     <h2>Order Number #1700834</h2>
                     <div className="aem-Grid aem-Grid--12 demo-Grid">
-                        <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn demo-GridColumn--separator shiping-info-column">
+                        <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn demo-GridColumn--separator shiping-info-column">
                             <h3>Shipping Information</h3>
                             <p>{items.Email}</p>
                             <p>{items.Phone}</p>
@@ -44,7 +44,7 @@ const PlaceOrder = ({ }) => {
                             <span><p>{items.City} {items.ZIP}</p></span>
                             <span><p>{items.State}</p></span>
                         </div>
-                        <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn demo-GridColumn--separator shiping-method-column">
+                        <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn demo-GridColumn--separator shiping-method-column">
                             <h3>Shipping Method</h3>
                             <p>{rediolocaldata}</p>
                         </div>
@@ -55,43 +55,43 @@ const PlaceOrder = ({ }) => {
                         </div>
                     </div>
                     <di className="aem-Grid aem-Grid--12 demo-Grid">
-                    { Getcarddata.products && Getcarddata.products.map((carddatalocal) => {
-                                return (
-                                    <>
-                                        <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn demo-GridColumn--separator">
-                                            <div className="aem-Grid aem-Grid--12 demo-Grid card-product">
-                                                <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn demo-GridColumn--separator ">
-                                                    <img src={carddatalocal.image} alt="photo" />
-                                                </div>
-                                                <div className="aem-GridColumn aem-GridColumn--default--9 demo-GridColumn demo-GridColumn--separator ">
-                                                    <span><h6>{carddatalocal.title}</h6></span>
-                                                    <ul>
-                                                        <li>Size: Medium</li>
-                                                        <li>Color: Storm</li>
-                                                        <li>Quantity:{carddatalocal.count}</li>
-                                                    </ul>
-                                                </div>
+                        {Getcarddata.products && Getcarddata.products.map((carddatalocal) => {
+                            return (
+                                <>
+                                    <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn demo-GridColumn--separator">
+                                        <div className="aem-Grid aem-Grid--12 demo-Grid card-product">
+                                            <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--3 aem-GridColumn--phone--3 demo-GridColumn demo-GridColumn--separator ">
+                                                <img src={carddatalocal.image} alt="photo" />
+                                            </div>
+                                            <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--tablet--9 aem-GridColumn--phone--9 demo-GridColumn demo-GridColumn--separator ">
+                                                <span><h6>{carddatalocal.title}</h6></span>
+                                                <ul>
+                                                    <li>Size: Medium</li>
+                                                    <li>Color: Storm</li>
+                                                    <li>Quantity:{carddatalocal.count}</li>
+                                                </ul>
                                             </div>
                                         </div>
-                                    </>
-                                );
+                                    </div>
+                                </>
+                            );
 
-                            })};
+                        })};
                     </di>
                     <div className="aem-Grid aem-Grid--12 demo-Grid order-info">
-                                <p>You will also receive an email with the details and we will let you know when your order has shipped.</p>
-                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore <br/> magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. For assistance call <br/> Support at 1-800-867-5309, M - F, 9am - 8pm EST.</p>
-                            </div>
+                        <p>You will also receive an email with the details and we will let you know when your order has shipped.</p>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore <br /> magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. For assistance call <br /> Support at 1-800-867-5309, M - F, 9am - 8pm EST.</p>
+                    </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--4 demo-GridColumn demo-GridColumn--separator discount-box">
-                 <h4>Give us a follow to SAVE 20% on your next order.</h4>
-                 <div className="media-icon">
-                 <ul>
-                    <li><img src={instagram1}  /></li>
-                    <li><img src={facebook1}  /></li>
-                    <li><img src={twitter1}  /></li>
-                 </ul>
-                 </div>
+                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--hide  demo-GridColumn demo-GridColumn--separator discount-box">
+                    <h4>Give us a follow to SAVE 20% on your next order.</h4>
+                    <div className="media-icon">
+                        <ul>
+                            <li><img src={instagram1} /></li>
+                            <li><img src={facebook1} /></li>
+                            <li><img src={twitter1} /></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </>

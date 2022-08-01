@@ -23,8 +23,6 @@ const Header = () => {
         switch (e) {
             case "showHideComp1":
                 setShowHideComp1(!showHideComp1);
-                default : 
-                setShowHideComp1(showHideComp1); 
         }
     }
     const navigate = useNavigate();

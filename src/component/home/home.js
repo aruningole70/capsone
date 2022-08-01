@@ -88,7 +88,58 @@ const Home = () => {
                     <button onClick={handleClick}>SHOP DEVICES</button>
                 </div>
             </div>
+            
         </div>
+        
+       
     );
 }
 export default Home;
+{/* <div className="arun">
+            <div className='aem-Grid aem-Grid--12  categories-main'>
+        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--3 banner-mid">
+        <div className='category-img'>
+             <img src={image}/>
+        </div>
+        <div className='category-shop'>
+             <h5>Shop Women</h5>
+             <p>Lorem ipsum dolor sit amet</p>
+        </div>
+        
+        </div>
+        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--3 banner-mid">
+       <div className='category-img'>
+       <img src={image}/>
+       </div>
+        
+        <div className='category-shop'>
+             <h5>Shop Women</h5>
+             <p>Lorem ipsum dolor sit amet</p>
+             
+        </div>
+       
+        </div>
+        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--3 banner-mid">
+        <div className='category-img'>
+        <img src={image}/>
+        </div>
+        <div className='category-shop'>
+             <h5>Shop Women</h5>
+             <p>Lorem ipsum dolor sit amet</p>
+             
+        </div>
+        
+        </div>
+        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--3 banner-mid">
+       <div className='category-img'>
+       <img src={image}/>
+       </div>
+        <div className='category-shop'>
+             <h5>Shop Women</h5>
+             <p>Lorem ipsum dolor sit amet</p>
+             
+        </div>
+        
+        </div>
+        </div>
+            </div> */}

@@ -1,7 +1,6 @@
 @import './scss/vendor';
 @import './component/header/header';
 @import './component/footer/footer';
-@import './component/body/banner/banner';
 @import './component/body/listing-banner/listing-banner';
 @import './component/body/cart/cart';
 @import './component/body/product-deteils/product-details';
@@ -9,10 +8,36 @@
 @import './component/home/home';
 @import './component/body/checkout/checkout';
 @import './component//body/placeorder/palceorder';
+@import './component/body/banner/banner';
 
 
 
-
+// #root {
+//     .rsis-container {
+//       // do something
+//       max-width: 250px !important;
+//           /* max-width: 250px !important; */
+//     display: flex;
+//     display: flex !important;
+//     align-items: center !important;
+//     justify-content: center !important;
+//     background: white
+//     }
+//   }
+  
+//   #root {
+//     .rsis-image {
+//       background-size: contain !important;
+//       background-repeat: no-repeat !important;
+//       background-size: contain !important;
+//       background-repeat: no-repeat !important;
+//       max-width: 200px !important;
+//       margin: 0 auto !important;
+//       background-position: center !important;
+//       left: 0;
+//       right: 0 !important;
+//     }
+//   }
 
 // .body{
 //     align-items: center;
