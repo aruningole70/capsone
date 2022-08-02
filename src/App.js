@@ -13,7 +13,6 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <hr />
       <Routes>
         <Route>
           <Route exact path='/' element={<Home/>} />
@@ -24,7 +23,6 @@ function App() {
         <Route exact path="/placeorder" element={<PlaceOrder />}/>
         </Route>
       </Routes>
-      <hr />
       <Footer />
     </div>
   );

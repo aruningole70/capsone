@@ -1,145 +1,20 @@
 import React from "react";
 import '../../App.css';
-import woman from '../../assects/woman.png';
-import width from '../../assects/width.svg';
-import hero1 from '../../assects/hero1.png';
-import hero2 from '../../assects/hero2.png';
-import image from '../../assects/image.png';
-import { useNavigate } from "react-router-dom";
+import Banner1 from "./banner1";
+import MobileBanner1 from "./mobile-banner1";
+import Banner3 from "./banner3";
+import Banner4 from "./banner4";
 
 const Home = () => {
-
-
-    // const getCatagory = async () => {
-    //     const response = await fetch(`https://fakestoreapi.com/products/${id}`);
-    //     const data = await response.json();
-       
-    // }
-    const navigate = useNavigate ();
-    const handleClick = () => {
-        navigate('/body');
-    };
+  
 
     return (
         <div className="aem-Grid aem-Grid--default--12 aem-Grid--tablet--6 aem-Grid--phone--1 demo-Grid">
-            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--3 aem-GridColumn--phone--1 demo-GridColumn shop-menu">
-                <div className="home-banner">
-                    <h1>Shop the new <br /> Signature Collection</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod <br /> tempor incididunt ut labore et dolore magna aliqua. Lobortis mattis <br /> aliquam faucibus purus.</p>
-                    <button onClick={handleClick}>SHOP NOW</button>
-                </div>
-            </div>
-            <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--3 aem-GridColumn--phone--1 demo-GridColumn home-image shop-menu">
-                <img src={hero1} alt="fashion image" />
-            </div>
-            <div className="aem-Grid aem-Grid--default--12 aem-Grid--tablet--6 aem-Grid--phone--1 demo-Grid shop-menu">
-                <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn demo-GridColumn--separator demo-GridColumn--multiline shoping-menu">
-                    <img src={woman} alt="shop for womans" />
-                    <div className="shop-discription">
-                        <h2>Shop Women</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <img src={width} alt="here is width image" />
-                    </div>
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn demo-GridColumn--separator demo-GridColumn--multiline shoping-menu">
-                    <img src={woman} alt="shop for womans" />
-                    <div className="shop-discription">
-                        <h2>Shop Men</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <img src={width} alt="here is width image" />
-                    </div>
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn demo-GridColumn--separator demo-GridColumn--multiline shoping-menu">
-                    <img src={woman} alt="shop for womans" />
-                    <div className="shop-discription">
-                        <h2>Jwelary</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <img src={width} alt="here is width image" />
-                    </div>
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn demo-GridColumn--separator demo-GridColumn--multiline shoping-menu">
-                    <img src={woman} alt="shop for womans" />
-                    <div className="shop-discription">
-                        <h2>Electronics</h2>
-                        <p>Lorem ipsum dolor sit amet</p>
-                        <img src={width} alt="here is width image" />
-                    </div>
-                </div>
-            </div>
-            <div className="aem-Grid aem-Grid--default--12 aem-Grid--tablet--6 aem-Grid--phone--1 demo-Grid">
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--3 aem-GridColumn--phone--1 demo-GridColumn">
-                    <h3>Take off in the new Signature Legging</h3>
-                    <p>Lorem Ipsum Dolor Tempor</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor labore dolore magna lorem ipsum dolor sit dolore magna.</p>
-                    <button className="SHOP-COLLECTION">SHOP COLLECTION</button>
-                    <button className="SHOP-NOW" onClick={handleClick}>SHOP NOW</button>
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--3 aem-GridColumn--phone--1 demo-GridColumn hero-image">
-                    <img src={hero2} alt="here is hero image 2" />
-                </div>
-            </div>
-            <div className="aem-Grid aem-Grid--default--12 aem-Grid--tablet--6 aem-Grid--phone--1 demo-Grid">
-                <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn climed-man">
-                <img src={image} alt="here is hero image 3" />
-                </div>
-                <div className="aem-GridColumn aem-GridColumn--default--4 demo-GridColumn">
-                    <h4>Conquer your next adventure</h4>
-                    <p>Lorem Ipsum Dolor Tempor</p>
-                    <button onClick={handleClick}>SHOP DEVICES</button>
-                </div>
-            </div>
-            
-        </div>
-        
-       
+            <div className="dextop-banner1"><Banner1/></div>
+                <div className="mobile-banner1"><MobileBanner1/></div> 
+                <div className="banner3"><Banner3/> </div>
+                <div className="banner4"><Banner4/></div>              
+        </div>  
     );
 }
 export default Home;
-{/* <div className="arun">
-            <div className='aem-Grid aem-Grid--12  categories-main'>
-        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--3 banner-mid">
-        <div className='category-img'>
-             <img src={image}/>
-        </div>
-        <div className='category-shop'>
-             <h5>Shop Women</h5>
-             <p>Lorem ipsum dolor sit amet</p>
-        </div>
-        
-        </div>
-        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--3 banner-mid">
-       <div className='category-img'>
-       <img src={image}/>
-       </div>
-        
-        <div className='category-shop'>
-             <h5>Shop Women</h5>
-             <p>Lorem ipsum dolor sit amet</p>
-             
-        </div>
-       
-        </div>
-        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--3 banner-mid">
-        <div className='category-img'>
-        <img src={image}/>
-        </div>
-        <div className='category-shop'>
-             <h5>Shop Women</h5>
-             <p>Lorem ipsum dolor sit amet</p>
-             
-        </div>
-        
-        </div>
-        <div className="aem-GridColumn aem-GridColumn--phone--12  aem-GridColumn--tablet--12 aem-GridColumn--default--3 banner-mid">
-       <div className='category-img'>
-       <img src={image}/>
-       </div>
-        <div className='category-shop'>
-             <h5>Shop Women</h5>
-             <p>Lorem ipsum dolor sit amet</p>
-             
-        </div>
-        
-        </div>
-        </div>
-            </div> */}

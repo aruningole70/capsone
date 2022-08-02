@@ -97,7 +97,7 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
                     <Sidebar filterProduct={filterProduct} initialDataCat={initialDataCat} />
                 </div> */}
                 
-                <div className="aem-GridColumn aem-GridColumn--default--9 demo-GridColumn">
+                <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--tablet--9 aem-GridColumn--phone--12 demo-GridColumn">
                     <div className="aem-Grid aem-Grid--12 demo-Grid">
                         <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--3 aem-GridColumn--phone--hide demo-GridColumn">
                             <p>20 Results</p>
@@ -125,7 +125,7 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
                             <li>38 Results</li>
                         </div>
                     </div>
-                    <div className="aem-Grid aem-Grid--12 demo-Grid">
+                    <div className="aem-Grid aem-Grid--12 demo-Grid listed-products">
                         {loading ? (<h1 style={{ fontSize: "62px" }}>Loading...</h1>) :
                             <>
                                 {data.slice(pagination.start, pagination.end).map((prod) => {

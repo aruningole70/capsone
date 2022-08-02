@@ -16,6 +16,21 @@
     }
 }
 
+@media (min-width : 786px) {
+    .contact{
+        input{
+            width: 90%;
+        }
+    }   
+}
+
+@media (min-width : 786px) {
+    .shiping-input {
+        input{
+            width: 45%;
+        }
+    }
+}
 .checkout {
     h1 {
         text-align: center;
@@ -70,7 +85,6 @@
     input {
         background: #FFFFFF 0% 0% no-repeat padding-box;
         border: 2px solid #B5B7BC;
-        width: 100%;
         border-radius: 8px;
         opacity: 1;
     }
@@ -381,6 +395,13 @@
         color: #1363DF;
         text-transform: uppercase;
         opacity: 1;
+    }
+}
+@media (max-width : 786px) {
+    .shiping-input{
+        input{
+            width: 100%;
+        }
     }
 }
 

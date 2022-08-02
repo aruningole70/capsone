@@ -34,7 +34,7 @@ const Header = () => {
         navigate('/cart');
     };
     return (
-        <nav className='aem-Grid'>
+        <nav className='aem-Grid aem-Grid--12 demo-Gridd'>
             <div className='aem-Grid aem-Grid--12 demo-Grid main-nav'>
                 <h1 onClick={homeClick} className='aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--phone--12 aem-GridColumn--tablet--6 demo-GridColumn demo-GridColumn--separator logo-image'>VENIA</h1>
                 <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 aem-GridColumn--tablet--6 demo-GridColumn demo-GridColumn--separator list-item'>

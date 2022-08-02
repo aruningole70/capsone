@@ -5371,13 +5371,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .paginate ul li {
   list-style-type: none;
+  padding-left: 5%;
 }
 
 .paginate ul li button {
@@ -5949,75 +5950,63 @@
   opacity: 1;
 }
 
-.home-image img {
-  width: 100%;
+@media (max-width: 786px) {
+  .dextop-banner1 {
+    display: none;
+  }
 }
 
-.home-banner {
-  background-color: #B5B7BC;
-  padding-left: 5%;
+@media (min-width: 786px) {
+  .mobile-banner1 {
+    display: none;
+  }
 }
 
-.home-banner h1 {
-  text-align: left;
-  font: normal normal 600 48px/60px Source Serif Pro;
+.mobile-banner-min-div {
+  background-size: cover;
+}
+
+.mobile-banner {
+  text-align: center;
+  padding-top: 80%;
+  padding-bottom: 20%;
+}
+
+.mobile-banner h1 {
+  font: normal normal 600 36px/45px Source Serif Pro;
   letter-spacing: 0px;
-  color: #172026;
+  color: #1B252C;
   opacity: 1;
 }
 
-.home-banner p {
-  text-align: left;
+.mobile-banner p {
   font: normal normal normal 16px/24px Muli;
-  letter-spacing: 0px;
-  color: #172026;
+  letter-spacing: 0.32px;
+  color: #1B252C;
   opacity: 1;
 }
 
-.home-banner button {
-  background-color: #1363DF;
-  color: #ffff;
+.mobile-banner button {
+  width: 220px;
+  height: 40px;
+  background: #1363DF 0% 0% no-repeat padding-box;
   -webkit-box-shadow: 0px 3px 6px #39373729;
           box-shadow: 0px 3px 6px #39373729;
-  border: none;
   border-radius: 10px;
+  text-align: center;
+  font: normal normal bold 14px/16px Muli;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
   opacity: 1;
 }
 
-.shop-discription img {
-  width: 100%;
+.banner3 {
+  padding-top: 3%;
 }
 
-.climed-man img {
-  width: 100%;
-}
-
-.hero-image img {
-  width: 100%;
-}
-
-.categories-main {
-  position: relative;
-  bottom: 3rem;
-  background-color: white;
-}
-
-.categories-main .banner-mid {
-  padding-right: 1rem;
-}
-
-.category-img img {
-  width: 100%;
-  height: 250px;
-}
-
-.category-shop {
-  background-color: #1B252CD9;
-  color: white;
-  position: relative;
-  bottom: 3rem;
-  height: 5.5rem;
-  border-bottom: 5px solid blue;
+.banner4 {
+  padding-top: 3%;
 }
 
 .contact label {
@@ -6034,6 +6023,18 @@
   width: 100%;
   border-radius: 8px;
   opacity: 1;
+}
+
+@media (min-width: 786px) {
+  .contact input {
+    width: 90%;
+  }
+}
+
+@media (min-width: 786px) {
+  .shiping-input input {
+    width: 45%;
+  }
 }
 
 .checkout h1 {
@@ -6087,7 +6088,6 @@
 .shiping-input input {
   background: #FFFFFF 0% 0% no-repeat padding-box;
   border: 2px solid #B5B7BC;
-  width: 100%;
   border-radius: 8px;
   opacity: 1;
 }
@@ -6398,6 +6398,12 @@
   opacity: 1;
 }
 
+@media (max-width: 786px) {
+  .shiping-input input {
+    width: 100%;
+  }
+}
+
 .order-page h1 {
   text-align: center;
   font: normal normal 600 48px/45px Source Serif Pro;
@@ -6517,53 +6523,413 @@
   display: flex;
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
-}
-
-.brand-image {
-  width: 100%;
-}
-
-.brand-image img {
-  width: 100%;
-  padding-top: 5%;
+  position: relative;
 }
 
 .brand-box {
-  height: 400px;
+  width: 30%;
+  height: 352px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #1B252C;
+}
+
+.brand-box h1 {
   text-align: center;
   font: normal normal 600 48px/60px Source Serif Pro;
   letter-spacing: 0px;
   color: #FFFFFF;
   opacity: 1;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+
+.brand-box .max-header {
+  text-align: center;
+}
+
+.brand-box .max-header img {
+  width: 102px;
+  height: 8px;
+}
+
+.brand-image {
+  width: 70%;
+  padding-top: 15px;
+}
+
+.brand-image img {
+  width: 100%;
+  height: 320px;
+}
+
+@media (max-width: 786px) {
+  .brand-image {
+    width: 100%;
+    padding-top: 0;
+  }
+  .brand-box {
+    width: 90%;
+    height: 159px;
+    -webkit-transform: translateY(-75px);
+            transform: translateY(-75px);
+  }
+  .baneer {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.shop-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.brand-box img {
-  width: 100px;
-  height: 20px;
+.banner1-image {
+  width: 50%;
 }
 
-.banner-bottom {
-  width: 102px;
-  height: 8px;
-  background-color: blue;
+.banner1-image img {
+  width: 100%;
 }
 
-@media ((max-width: 768px)) {
-  .brand-box {
-    margin-top: -10%;
-    margin-left: 25%;
+.home-banner {
+  padding-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.home-banner h1 {
+  text-align: left;
+  font: normal normal 600 48px/60px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.home-banner p {
+  text-align: left;
+  font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.home-banner button {
+  width: 220px;
+  height: 40px;
+  background-color: #1F39FF;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 3px 6px #39373729;
+          box-shadow: 0px 3px 6px #39373729;
+  text-align: center;
+  font: normal normal bold 14px/16px Muli;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.frist-banner {
+  width: 50%;
+  background-color: #E5E5E7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.arrow-left {
+  padding-top: 25%;
+}
+
+.arrow-left img {
+  width: 20px;
+  height: 40px;
+  opacity: 1;
+}
+
+.banner3-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+}
+
+.banner3-box {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 10%;
+}
+
+.banner3-box h3 {
+  text-align: left;
+  font: normal normal 600 48px/60px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.banner3-box .p1 {
+  text-align: left;
+  font: normal normal 600 20px/25px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.banner3-box p {
+  text-align: left;
+  font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.hero2-image {
+  width: 40%;
+}
+
+.hero2-image img {
+  width: 100%;
+}
+
+@media (max-width: 786px) {
+  .hero2-image {
+    width: 100%;
   }
+  .banner3-box {
+    width: 100%;
+    padding: 0%;
+  }
+  .banner3-box h3 {
+    text-align: center;
+  }
+  .banner3-box .p1 {
+    text-align: center;
+  }
+  .banner3-box p {
+    text-align: center;
+  }
+  .baneer3-button {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  .baneer3-button button {
+    width: 220px;
+    height: 40px;
+  }
+}
+
+.baneer3-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.baneer3-button .SHOP-COLLECTION {
+  width: 221px;
+  height: 40px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  border: 2px solid #2A65D7;
+  border-radius: 10px;
+  text-align: center;
+  font: normal normal bold 14px/16px Muli;
+  letter-spacing: 0px;
+  color: #1363DF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.baneer3-button .SHOP-NOW {
+  width: 221px;
+  height: 40px;
+  background: #1363DF 0% 0% no-repeat padding-box;
+  -webkit-box-shadow: 0px 3px 6px #39373729;
+          box-shadow: 0px 3px 6px #39373729;
+  border-radius: 10px;
+  text-align: center;
+  font: normal normal bold 14px/16px Muli;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
+}
+
+.banner4-main-div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.climed-man-image {
+  width: 60%;
+  padding-top: 1%;
+}
+
+.climed-man-image img {
+  width: 100%;
+  height: 400px;
+}
+
+.banner4-box {
+  position: relative;
+  width: 40%;
+  height: 432px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 5%;
+  background-color: #1B252C;
+}
+
+.banner4-box h4 {
+  text-align: left;
+  font: normal normal 600 48px/60px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.banner4-box p {
+  text-align: left;
+  font: normal normal 600 20px/25px Muli;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.banner4-box button {
+  width: 180px;
+  height: 40px;
+  border: 2px solid #FFFFFF;
+  background: none;
+  text-align: center;
+  font: normal normal bold 14px/16px Muli;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  border-radius: 10px;
+  opacity: 1;
+}
+
+@media (max-width: 786px) {
+  .climed-man-image {
+    width: 100%;
+  }
+  .banner4-box {
+    display: none;
+  }
+  .banner4-main-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .banner4-mobile-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 786px) {
+  .banner4-mobile-box {
+    display: none;
+  }
+}
+
+.banner4-mobile-box {
+  -webkit-transform: translateY(-60px);
+          transform: translateY(-60px);
+  width: 80%;
+  height: 310px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #1B252C;
+}
+
+.banner4-mobile-box h4 {
+  text-align: center;
+  font: normal normal 600 36px/45px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.banner4-mobile-box p {
+  text-align: center;
+  font: normal normal 600 20px/24px Muli;
+  letter-spacing: 0.6px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.banner4-mobile-box button {
+  width: 180px;
+  height: 40px;
+  border: 2px solid #FFFFFF;
+  border-radius: 10px;
+  background: none;
+  text-align: center;
+  font: normal normal bold 14px/16px Muli;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  opacity: 1;
 }
 /*# sourceMappingURL=App.css.map */
