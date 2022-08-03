@@ -4,12 +4,12 @@
 
 .sub-images {
     padding-left: 13%;
-
     .sub-img-style {
         padding: 5%;
-
+        height: 100px;
         img {
-            width: 95%;
+            width: 100%;
+            height: 100px;
         }
     }
 }

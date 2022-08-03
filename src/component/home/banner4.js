@@ -26,11 +26,11 @@ function Banner4() {
                     <p>Lorem Ipsum Dolor Tempor</p>
                     <button onClick={handleClick}>SHOP DEVICES</button>
                 </div>
-            </div>
-            {/* <span className='mapiconWrapper'>
+                <span className='mapiconWrapper'>
                         <img src={mapPin} alt="map pin icon" className='mapPinImg' />
                         <img src={maxHeader4} alt='Horizontal line for styling' className='mapMaxHeaderImg' />
-                    </span> */}
+                    </span>
+            </div>
         </>
 
     );

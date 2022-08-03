@@ -5460,6 +5460,10 @@
   }
 }
 
+.listed-products {
+  text-align: center;
+}
+
 .cart-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5653,10 +5657,12 @@
 
 .sub-images .sub-img-style {
   padding: 5%;
+  height: 100px;
 }
 
 .sub-images .sub-img-style img {
-  width: 95%;
+  width: 100%;
+  height: 100px;
 }
 
 .p-logo ul {
@@ -5950,6 +5956,10 @@
   opacity: 1;
 }
 
+.dextop-banner1 {
+  width: 100%;
+}
+
 @media (max-width: 786px) {
   .dextop-banner1 {
     display: none;
@@ -6001,12 +6011,65 @@
   opacity: 1;
 }
 
-.banner3 {
+.banner4 {
   padding-top: 3%;
 }
 
-.banner4 {
-  padding-top: 3%;
+.mobile-shop-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10%;
+  padding-right: 10%;
+  -webkit-transform: translateY(-45px);
+          transform: translateY(-45px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.mobile-shoping-menu {
+  width: 100%;
+  height: 300px;
+}
+
+.mobile-shoping-menue-image {
+  width: 100%;
+}
+
+.mobile-shoping-menue-image img {
+  width: 100%;
+}
+
+.mobile-shop-discription {
+  height: 90px;
+  background-color: #1B252CD9;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+}
+
+.mobile-shop-discription h2 {
+  text-align: left;
+  padding-left: 25px;
+  font: normal normal 600 24px/30px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.mobile-shop-discription p {
+  text-align: left;
+  padding-left: 25px;
+  font: normal normal normal 16px/23px Muli;
+  letter-spacing: 0.32px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.mobile-shop-discription .mobile-max-header-bemnner img {
+  width: 100%;
 }
 
 .contact label {
@@ -6576,7 +6639,7 @@
   }
   .brand-box {
     width: 90%;
-    height: 159px;
+    height: 160px;
     -webkit-transform: translateY(-75px);
             transform: translateY(-75px);
   }
@@ -6591,6 +6654,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -6598,10 +6662,12 @@
 
 .banner1-image {
   width: 50%;
+  height: 550px;
 }
 
 .banner1-image img {
   width: 100%;
+  height: 550px;
 }
 
 .home-banner {
@@ -6665,6 +6731,11 @@
   width: 20px;
   height: 40px;
   opacity: 1;
+}
+
+.banner2-div {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
 }
 
 .banner3-main {
@@ -6931,5 +7002,98 @@
   color: #FFFFFF;
   text-transform: uppercase;
   opacity: 1;
+}
+
+.mapiconWrapper {
+  position: absolute;
+  left: 0%;
+  padding-left: 58%;
+  bottom: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-left: -1em;
+}
+
+.mapiconWrapper .mapPinImg {
+  width: 33px;
+  height: 40px;
+  margin-left: 1.6rem;
+}
+
+.mapiconWrapper .mapMaxHeaderImg {
+  width: 102px;
+  height: 8px;
+  margin-left: -1em;
+}
+
+@media (max-width: 786px) {
+  .banner4-main-div img {
+    width: 100%;
+  }
+  .mapiconWrapper {
+    padding-left: 22%;
+    -webkit-transform: translateY(-273px);
+            transform: translateY(-273px);
+  }
+}
+
+.shop-menu {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.shoping-menu {
+  width: 23%;
+  padding-left: 1%;
+}
+
+.shoping-menu .shoping-menue-image {
+  width: 100%;
+  height: 320px;
+}
+
+.shoping-menu .shoping-menue-image img {
+  width: 100%;
+  height: 320px;
+}
+
+.shop-discription {
+  width: 100%;
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  height: 90px;
+  background-color: #1B252CD9;
+}
+
+.shop-discription h2 {
+  text-align: left;
+  padding-left: 25px;
+  font: normal normal 600 24px/30px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.shop-discription p {
+  text-align: left;
+  padding-left: 25px;
+  font: normal normal normal 16px/23px Muli;
+  letter-spacing: 0.32px;
+  color: #FFFFFF;
+  opacity: 1;
+}
+
+.shop-discription .max-header-bemnner img {
+  width: 100%;
 }
 /*# sourceMappingURL=App.css.map */

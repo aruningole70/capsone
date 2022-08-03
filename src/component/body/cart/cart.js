@@ -21,7 +21,7 @@ function Cart() {
     };
 
     const updatedState = useSelector((state) => state.Change);
-    if (updatedState.count === 0) {
+    if (updatedState.count === 0 && localStorage.getItem("products")) {
         console.log(localStorage.getItem("products"));
         updatedState.products = JSON.parse(localStorage.getItem("products"));
         updatedState.count = 1;

@@ -15,6 +15,8 @@ function Categories() {
   // List=[];
 
   const [products, setProducts] = useState([]);
+
+  const [selectedCategories, setSelectedCategories] = useState([]);
   
  
 
@@ -28,9 +30,28 @@ function Categories() {
 // this.list=data;
       })
   }, []);
-  
   const filterProduct =(cat) => {
-    const updatedList = products.filter((x)=>x.category === cat);
+    var isInArray = selectedCategories.find(function (el) { return el === cat }) !== undefined;
+    if (!isInArray) {
+      selectedCategories.push(cat);
+    }else{
+      for (let i = 0; i < selectedCategories.length; i++) {
+        if(selectedCategories[i] === cat){
+          selectedCategories.splice(i,1);
+        }
+      }
+    }
+    var updatedList = [];
+    for ( var i = 0; i < products.length; i++ ) {
+      for ( var e = 0; e < selectedCategories.length; e++ ) {
+          if ( products[i].category === selectedCategories[e] ){
+            updatedList.push( products[i] )
+          };
+      }
+    }
+    if(selectedCategories.length === 0){
+      updatedList = products;
+    }
     console.log("men's clothing",updatedList);
     setDataCat(updatedList);    
   }

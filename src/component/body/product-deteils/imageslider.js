@@ -9,13 +9,13 @@ const [currentimage , setCurrentImage] = useState(0);
 
 const slidestyle = {
     width : "100%",
-    height: "680px",
+    height: "550px",
     backgroundPosition: "center",
     backgroundSize: "cover",
     backgroundImage: `url(${slides[currentimage].url})`,
 }
 const sliderstyle ={
-    height:"680px",
+    height:"550px",
     position:"relative",
 }
 
@@ -51,7 +51,7 @@ const rightArrowstyle ={
     display: "flex",
     justifyContent: "center",
     bottom : "20px",
-    paddingTop: "600px",
+    paddingTop: "460px",
  }
 
  const dotStyle = {

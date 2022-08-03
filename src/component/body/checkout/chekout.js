@@ -7,7 +7,6 @@ import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
     const [redio, setRedio] = useState();
-    // const [showdifaultdiv , setShowDifalutdiv] = useState(true);
     const [show1div, setShow1div] = useState(false);
     const [show2div, setShow2div] = useState(false);
     const [show3div, setShow3div] = useState(false);
@@ -84,6 +83,17 @@ const Checkout = () => {
         console.log(localStorage.getItem("products"));
         Getcarddata.products = JSON.parse(localStorage.getItem("products"));
         Getcarddata.count = 1;
+    }
+    let subTotal = 0;
+    if(Getcarddata.products){
+        for (let i = 0; i < Getcarddata.products.length; i++) {
+            subTotal = subTotal + (Getcarddata.products[i].price * Getcarddata.products[i].count);
+        } 
+    }
+    
+    let estTotal = 0;
+    for (let i = 0; i < subTotal; i++) {
+        estTotal = subTotal - (77.60 + 100 + 23.28);
     }
     return (
         <div>
@@ -251,7 +261,7 @@ const Checkout = () => {
                                     </div>
                                 </div>
                                 <br />
-                                <img src={csquare} alt="square box" /><p>Billing address same as shipping address</p>
+                                <p> <img src={csquare} alt="square box" />Billing address same as shipping address</p>
                                 <hr />
                                 <input type="radio" id="PayPal" name="PayPal" value="PayPal" />
                                 <label htmlFor="PayPal">PayPal</label><br />
@@ -324,12 +334,12 @@ const Checkout = () => {
                                     <p>Estimated Total</p>
                                 </div>
                                 <div className="pricing-amount">
-                                    <h4>$  388.00</h4>
+                                    <h4>$  {subTotal}</h4>
                                     <h4>- $ 77.60</h4>
                                     <h4>- $ 100.00</h4>
                                     <h4>$ 23.28</h4>
                                     <h4>FREE</h4>
-                                    <p>$ $ 233.68</p>
+                                    <p>$ {estTotal} </p>
                                 </div>
                             </div>
                         </div>

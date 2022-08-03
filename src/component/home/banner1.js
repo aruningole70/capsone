@@ -4,7 +4,7 @@ import '../../App.css';
 import imageh from '../../assects/imageh.png';
 import cleft1 from '../../assects/cleft1.svg';
 import { useNavigate } from "react-router-dom";
-// import Banner2 from "./banner2";
+import Banner2 from "./banner2";
 
 function Banner1 (){
 
@@ -14,7 +14,7 @@ function Banner1 (){
     };
  return(
     <>
-    <div className="aem-Grid aem-Grid--12 demo-Grid shop-menu">
+    <div className="shop-menu">
                 <div className="frist-banner">
                 <div className="arrow-left"><img src={cleft1}/></div>
                 <div className="home-banner">
@@ -27,7 +27,10 @@ function Banner1 (){
                 <img src={imageh} alt="fashion image" />
             </div>  
             </div>
-            {/* <Banner2/> */}
+            <div className="banner2-div">
+            <Banner2/>
+            </div>
+          
     </>
  );
 }

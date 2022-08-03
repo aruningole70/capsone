@@ -166,31 +166,38 @@
 //             }
 //  }
 // }
-// .mapiconWrapper {
-//     position: absolute;
-//     left: 0%;
-//     bottom: 10%;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: flex-start;
-//    margin-left: -1em;
+.mapiconWrapper {
+    position: absolute;
+    left: 0%;
+    padding-left: 58%;
+    bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+   margin-left: -1em;
 
-//     .mapPinImg {
-//         width: 10%;
-//         margin-bottom: 0.75em;
+    .mapPinImg {
+        width: 33px;
+        height: 40px;
+        margin-left: 1.6rem;
 
-//     }
+    }
 
-//     .mapMaxHeaderImg {
-//         width: 20%;
-//         margin-left: -1em;
+    .mapMaxHeaderImg {
+        width: 102px;
+    height: 8px;
+    margin-left: -1em;
 
-//     }
-//   }
-// @media (max-width : 786px) {
-//     .banner4-main-div{
-//         img{
-//             width: 100%;
-//         }
-//     }
-// }
+    }
+  }
+@media (max-width : 786px) {
+    .banner4-main-div{
+        img{
+            width: 100%;
+        }
+    }
+    .mapiconWrapper{
+        padding-left: 22%;
+    transform: translateY(-273px);
+    }
+}

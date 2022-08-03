@@ -10,6 +10,11 @@ import { useSelector } from 'react-redux/es/exports';
 
 const Header = () => {
     const getdata = useSelector ((state) => state.Change);
+    if (getdata.count === 0 && localStorage.getItem("products")) {
+        console.log(localStorage.getItem("products"));
+        getdata.products = JSON.parse(localStorage.getItem("products"));
+        getdata.count = 1;
+    }
     console.log(getdata);
     let subTotal = 0;
     if(getdata.products){

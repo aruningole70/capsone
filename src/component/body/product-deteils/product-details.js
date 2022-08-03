@@ -70,6 +70,7 @@ function Product() {
                                         <div className="sub-img-style"><img src={product.image} alt="here is product image" /></div>
                                         <div className="sub-img-style"><img src={product.image} alt="here is product image" /></div>
                                         <div className="sub-img-style"><img src={product.image} alt="here is product image" /></div>
+                                        <div className="sub-img-style"><img src={product.image} alt="here is product image" /></div>
                                     </div>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn main-image">
