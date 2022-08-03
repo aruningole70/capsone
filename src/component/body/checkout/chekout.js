@@ -6,7 +6,7 @@ import edit1 from '../../../assects/edit1.svg';
 import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
-    const [redio, setRedio] = useState();
+    const [redio, setRedio] = useState("");
     const [show1div, setShow1div] = useState(false);
     const [show2div, setShow2div] = useState(false);
     const [show3div, setShow3div] = useState(false);
@@ -15,7 +15,7 @@ const Checkout = () => {
     const [carddata, setCarddata] = useState(true);
     const [editcarddata, setEditCarddata] = useState(false);
 
-    const Getresiodata = (x) => {
+    const Getredodata = (x) => {
         setRedio(x.target.value);
     }
     const handlechange = () => {
@@ -207,11 +207,11 @@ const Checkout = () => {
                         {shiping && <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn shiping-address siping-by">
                             <h1>2. Shipping Method</h1>
                             <div className="siping-by">
-                                <input type="radio" id="first-redio" name="first-redio" value="Standard Shipping (4-8 business days via USPS) FREE" onChange={Getresiodata} />
+                                <input type="radio" id="first-redio" name="first-redio" value="Standard Shipping (4-8 business days via USPS) FREE" onChange={Getredodata} />
                                 <label htmlFor="first-redio">Standard Shipping (4-8 business days via USPS) FREE</label><br />
-                                <input type="radio" id="second-redio" name="first-redio" value="Express Delivery (2-5 business days via USPS) $17.95" onChange={Getresiodata} />
+                                <input type="radio" id="second-redio" name="first-redio" value="Express Delivery (2-5 business days via USPS) $17.95" onChange={Getredodata} />
                                 <label htmlFor="redio2">Express Delivery (2-5 business days via USPS) $17.95</label><br />
-                                <input type="radio" id="third-redio" name="first-redio" value="Next Day Delivery (Next business days via FedEx) $53.61" onChange={Getresiodata} />
+                                <input type="radio" id="third-redio" name="first-redio" value="Next Day Delivery (Next business days via FedEx) $53.61" onChange={Getredodata} />
                                 <label htmlFor="redio3">Next Day Delivery (Next business days via FedEx) $53.61</label><br />
                             </div>
                             <br />
