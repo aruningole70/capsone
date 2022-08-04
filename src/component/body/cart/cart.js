@@ -19,7 +19,6 @@ function Cart() {
 
         navigate('/checkout');
     };
-
     const updatedState = useSelector((state) => state.Change);
     if (updatedState.count === 0 && localStorage.getItem("products")) {
         console.log(localStorage.getItem("products"));
@@ -112,7 +111,7 @@ function Cart() {
                                 <p>Estimated Total</p>
                             </div>
                             <div className="pricing-amount">
-                                <h2>$ {subTotal}</h2>
+                                <h2>${subTotal}</h2>
                                 <h2>- $ 77.60</h2>
                                 <h2>- $ 100.00</h2>
                                 <h2>$ 23.28</h2>
