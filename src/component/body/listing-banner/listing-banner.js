@@ -40,21 +40,6 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
 
         navigate('/product-detail/' + id);
     };
-    // const getCategoryData = () => {
-    //     fetch("https://fakestoreapi.com/products/categories")
-    //         .then(res => {
-    //             return res.json()
-    //         })
-    //         .then(data => {
-    //             setData(data);
-
-    //         })
-    //     console.log(data)
-    // }
-
-    // useEffect(() => {
-    //     getCategoryData()
-    // }, []);
 
     return (
         <div>
@@ -68,26 +53,26 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
                         <h2>Filter</h2>
                         <hr />
                         <h2>Categories</h2>
-                        <br />
                         <input type="checkbox" id='chk1-label' aria-label="checkbox" onClick={($event) => {
                             setisSelected(!isSelected);
                             filterProduct("jewelery")
-                        }} />
-                        <label htmlFor="chk1-label"> Jewellery</label><br />
+                        }} />&nbsp;&nbsp;
+                        <label htmlFor="chk1-label"> Jewellery</label>
+                        <br/>
                         <input type="checkbox" id='chk2-label' aria-label="checkbox" onClick={($event) => {
                             setisSelected(!isSelected);
                             filterProduct("electronics")
-                        }} />
+                        }} />&nbsp;&nbsp;
                         <label htmlFor="chk2-label">  Electronics</label><br />
                         <input type="checkbox" id='chk3-label' aria-label="checkbox" onClick={($event) => {
                             setisSelected(!isSelected);
                             filterProduct("men's clothing")
-                        }} />
+                        }} />&nbsp;&nbsp;
                         <label htmlFor='chk3-label'>  Men’s Clothing</label><br />
                         <input type="checkbox" id='chk4-label' aria-label="checkbox" onClick={($event) => {
                             setisSelected(!isSelected);
                             filterProduct("women's clothing")
-                        }} />
+                        }} />&nbsp;&nbsp;
                         <label htmlFor='chk4-label'>Women’s Clothing</label>
                         <br />
                     </div>

@@ -204,7 +204,7 @@ const Checkout = () => {
                             </div>
                         </div>}</div>
                     {show1div && <div className="2nd-div">
-                        {shiping && <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn shiping-address siping-by">
+                        {shiping && <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn shiping-address siping-by">
                             <h1>2. Shipping Method</h1>
                             <div className="siping-by">
                                 <input type="radio" id="first-redio" name="first-redio" value="Standard Shipping (4-8 business days via USPS) FREE" onChange={Getredodata} />

@@ -15,40 +15,32 @@ import minus from '../../../assects/minus.svg';
 import plus from '../../../assects/plus.svg';
 import star from '../../../assects/star.svg';
 import star1 from '../../../assects/star1.svg';
-// import SimpleImageSlider from "react-simple-image-slider";
-import Imageslider from "./imageslider";
-// import SimpleImageSlider from "react-simple-image-slider";
-// import SimpleImageSlider from "react-simple-image-slider/dist/ImageSlider";
-// import SimpleImageSlider from "react-simple-image-slider";
-// import useResizeObserver from "@react-hook/resize-observer";
-
+import dot1  from '../../../assects/dot1.svg';
 function Product() {
     const [isloading, setIsloading] = useState(true);
     const myState = useSelector((state) => state.Change);
     const { id } = useParams();
     const [product, setProduct] = useState([]);
-    // let image = "";
     const dispatch = useDispatch();
     const getProducts = async () => {
         const response = await fetch(`https://fakestoreapi.com/products/${id}`);
         const data = await response.json();
         setProduct(data);
         setIsloading(false);
-        // images = product.image;
     }
     useEffect(() => {
         getProducts();
     }, [id]);
 
-    const slides = [
-        { url: product.image },
-        { url: product.image },
-        { url: product.image },
-        { url: product.image },
-        { url: product.image }
+    // const slides = [ for image slider
+    //     { url: product.image },
+    //     { url: product.image },
+    //     { url: product.image },
+    //     { url: product.image },
+    //     { url: product.image }
 
-    ];
-    // let image = img;
+    // ];
+    // let image = img;  for on click image show
     // const [image1 , setImage1] = useState(image);
     // const imagechage = (img) => {
     //     image = img;
@@ -74,26 +66,17 @@ function Product() {
                                     </div>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn main-image">
-                                    <Imageslider slides={slides} />
+                                     <img src={product.image} alt="here os product iamge" />
+                                     <div className="dots-for-image">
+                                        <ul>
+                                            <li><img src={dot1} /></li>
+                                            <li><img src={dot1} /></li>
+                                            <li><img src={dot1} /></li>
+                                            <li><img src={dot1} /></li>
+                                            <li><img src={dot1} /></li>
+                                        </ul>
+                                     </div>
                                 </div>
-                                {/* <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn main-image">
-                        <SimpleImageSlider
-                            width={450}
-                            height={600}
-                            images={images}
-                            showBullets={true}
-                            showNavs={true}
-                          />
-                        </div> */}
-                        {/* <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn">
-                        <SimpleImageSlider
-                            width={450}                            
-                            height={600}
-                            images={images}
-                            showBullets={true}
-                            showNavs={false}
-                          />
-                        </div> */}
                             </div>
                         </div>
                         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn product-details">

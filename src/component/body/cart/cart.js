@@ -40,17 +40,17 @@ function Cart() {
     return (
         <div className="demo-GridRowExample-markup cart">
             <header>Your Shopping Bag<br />
-                <img src={headerline} alt="here is shape" />
+                <span className="max-herder" ><img src={headerline} alt="here is shape" /></span>
             </header>
             <div className="aem-Grid aem-Grid--12 demo-Grid cart-section">
                 <div className="aem-GridColumn aem-GridColumn--default--8 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn ">
                     { updatedState.products && updatedState.products.map((prod) => {
                         return (
                             <div className="aem-Grid aem-Grid--12 aem-Grid--tablet--6 aem-Grid--phone--1 demo-Grid cart-items ">
-                                <div className="aem-GridColumn aem-GridColumn--default--3 aem-Grid--tablet--6 aem-Grid--phone--1  demo-GridColumn cart-img">
+                                <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--6  demo-GridColumn cart-img">
                                     <img src={prod.image} alt="here is cart image" />
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--3 aem-Grid--tablet--6 aem-Grid--phone--1 cart-list">
+                                <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 cart-list">
                                     <ul>
                                         <li>{prod.title}</li>
                                         <li>Size : Medium</li>
@@ -58,12 +58,12 @@ function Cart() {
                                         <li>${prod.price * prod.count}</li>
                                     </ul>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--3 aem-Grid--tablet--6 aem-Grid--phone--1 add-minus-icon">
+                                <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 add-minus-icon">
                                     <button onClick={() => dispatch(decCart(prod))}><img src={minus} alt="here is minus button" /></button>
                                     <input type="text" value={prod.count} />
                                     <button onClick={() => dispatch(incCart(prod))}><img src={plus} alt="here is add button" /></button>
                                 </div>
-                                <div className="aem-GridColumn aem-GridColumn--default--3 aem-Grid--tablet--6 aem-Grid--phone--1 ear-button">
+                                <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 ear-button">
                                     <button><img src={edit} alt="photo" />Edit item</button><br />
                                     <button onClick={() => dispatch(Remove(prod))}><img src={trash} alt="remove the cart-item" />Remove</button><br />
                                     <button><img src={heart} alt="photo" />Save for later</button>
