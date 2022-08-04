@@ -7,9 +7,6 @@ import arrowd from '../../../assects/arrowd.svg';
 import arrowup from '../../../assects/arrowup.svg';
 import sliders from '../../../assects/sliders.svg';
 import MobSideBar from './mob-sidebr';
-// import { useEffect } from "react";
-// import Sidebar from "./filter";
-
 
 const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
 
