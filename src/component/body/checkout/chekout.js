@@ -172,7 +172,7 @@ const Checkout = () => {
                                                     onChange={userData}
                                                     name="State" id="State" placeholder="California" />
                                             </div>
-                                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn">
+                                            <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn ">
                                                 <label htmlFor="ZIP">ZIP</label><br />
                                                 <input type="text" value={inputdata.ZIP}
                                                     onChange={userData}
