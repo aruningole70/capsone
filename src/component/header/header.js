@@ -58,8 +58,6 @@ const Header = () => {
                 </div>
                 <div className='aem-GridColumn aem-GridColumn--default--3 demo-GridColumn demo-GridColumn--separator list-item-icon'>
                     <ul>
-                        <li><img src={search} alt="here is search bar" />search</li>
-                        <li><img src={user} alt="go to log in page" />Sign in</li>
                         <li onClick={handleClick} className="cart-icon">
                             <img src={shoppingbag} alt="go to shoping cart" />
                             <span className='badge rounded-pill badge-notification bg-danger'>{subTotal}</span>
