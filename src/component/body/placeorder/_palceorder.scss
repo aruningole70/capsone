@@ -1,12 +1,4 @@
 .order-page {
-    h1 {
-        text-align: center;
-        font: normal normal 600 48px/45px Source Serif Pro;
-        letter-spacing: 0px;
-        color: #172026;
-        opacity: 1
-    }
-
     h2 {
         text-align: left;
         font: normal normal 600 20px/25px Muli;
@@ -107,5 +99,18 @@
         li{
             list-style-type: none;
         }
+    }
+}
+.order-succesfull-titles{
+    text-align: center;
+    h1 {
+        text-align: center;
+        font: normal normal 600 48px/45px Source Serif Pro;
+        letter-spacing: 0px;
+        color: #172026;
+        opacity: 1
+    }
+    img{
+        width: 102px;
     }
 }

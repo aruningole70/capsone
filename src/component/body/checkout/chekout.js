@@ -97,7 +97,7 @@ const Checkout = () => {
         estTotal = subTotal - (77.60 + 100 + 23.28);
     }
     return (
-        <div>
+        <div className="chekout-component">
             <div className="aem-Grid aem-Grid--12 aem-Grid--tablet--6 aem-Grid--phone--1 demo-Grid checkout">
                 <div className="checkout-heading">
                 <h1>Checkout</h1>
@@ -186,7 +186,7 @@ const Checkout = () => {
                             <div className="dekstop-button"><button className="continue" onClick={handlechange}>CONTINUE TO SHIPPING METHOD</button></div>
                             <div className="mobile-button"><button className="continue-mobile-button" onClick={handlechange}>CONTINUE</button></div>
                         </div>}
-                        {showdiv && <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn shiping-address ">
+                        {showdiv && <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn shiping-address pr32">
                             <div className="aem-Grid aem-Grid--12 demo-Grid shiping-info">
                                 <div className="aem-Grid aem-Grid--12 demo-Grid shipng-address-data">
                                     <h6>Shipping Information</h6>
@@ -223,7 +223,7 @@ const Checkout = () => {
                             <div className="mobile-button"><button className="continue-mobile-button" onClick={Rediohandal}>CONTINUE</button></div>
 
                         </div>}
-                        {editshiping && <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn  ">
+                        {editshiping && <div className="aem-GridColumn aem-GridColumn--default--8 demo-GridColumn pr32 ">
                             <div className="aem-Grid aem-Grid--12 demo-Grid shiping-info">
                                 <div className="aem-GridColumn aem-GridColumn--default--6 demo-GridColumn">
                                     <h6>Shipping Method</h6>
@@ -317,15 +317,15 @@ const Checkout = () => {
                             <br />
                             <div className="aem-Grid aem-Grid--12 demo-Grid place-order-button">
                                 <button onClick={PlaceOrder}>PLACE ORDER</button>
-                            </div>
+                            </div>                <br/>
                         </div>}</div>}
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn ">
+                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn pr32">
                     {show && <div className=" aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn sign-in">
                         <h3>Sign in for Express <br /> Checkout</h3>
                         <button>SIGN IN</button>
                     </div>}
-                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn checkout-cart-block pr32">
+                    <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--12 aem-GridColumn--phone--12 demo-GridColumn checkout-cart-block ">
                         <h1>Pricing Summary</h1>
                         <div className="cart-pricing">
                             <div className="pricing">

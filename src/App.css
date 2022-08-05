@@ -5267,6 +5267,11 @@
   opacity: 1;
 }
 
+.footer-item ul {
+  -webkit-transform: translateX(-27px);
+          transform: translateX(-27px);
+}
+
 .footer-item li {
   text-align: left;
   list-style-type: none;
@@ -6221,6 +6226,10 @@
   width: 100%;
 }
 
+.chekout-component {
+  padding-left: 2%;
+}
+
 .contact label {
   text-align: left;
   font: normal normal 600 16px/24px Muli;
@@ -6564,13 +6573,6 @@
   .state-input input {
     width: 100%;
   }
-  .shiping-address {
-    width: 96%;
-    padding-left: 2%;
-  }
-  .pr32 {
-    padding: 0px;
-  }
 }
 
 .continue {
@@ -6696,14 +6698,6 @@
   padding-right: 32px;
 }
 
-.order-page h1 {
-  text-align: center;
-  font: normal normal 600 48px/45px Source Serif Pro;
-  letter-spacing: 0px;
-  color: #172026;
-  opacity: 1;
-}
-
 .order-page h2 {
   text-align: left;
   font: normal normal 600 20px/25px Muli;
@@ -6806,6 +6800,22 @@
 
 .media-icon ul li {
   list-style-type: none;
+}
+
+.order-succesfull-titles {
+  text-align: center;
+}
+
+.order-succesfull-titles h1 {
+  text-align: center;
+  font: normal normal 600 48px/45px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.order-succesfull-titles img {
+  width: 102px;
 }
 
 .baneer {

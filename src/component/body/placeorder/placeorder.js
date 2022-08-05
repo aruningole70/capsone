@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import facebook1 from '../../../assects/facebook1.svg';
 import instagram1 from '../../../assects/instagram1.svg';
 import twitter1 from '../../../assects/twitter1.svg';
+import maxheader from '../../../assects/mh3.svg';
 import '../../../App.css';
 
 const PlaceOrder = ({ }) => {
@@ -31,7 +32,10 @@ const PlaceOrder = ({ }) => {
     return (
         <>
             <div className="aem-Grid aem-Grid--12 demo-Grid order-page">
-                <h1>Order Successful!</h1>
+                <div className="order-succesfull-titles">
+                    <h1>Order Successful!</h1>
+                    <img src={maxheader} />
+                    </div>
                 <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--tablet--8 aem-GridColumn--phone--12 demo-GridColumn demo-GridColumn--separator pr32">
                     <h2>Order Number #1700834</h2>
                     <div className="aem-Grid aem-Grid--12 demo-Grid">
