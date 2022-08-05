@@ -78,9 +78,9 @@ const PlaceOrder = ({ }) => {
                                         </div>
                                     </div>
                                 </>
-                            );
+                            )
 
-                        })};
+                        })}
                     </div>
                     <div className="aem-Grid aem-Grid--12 demo-Grid order-info">
                         <p>You will also receive an email with the details and we will let you know when your order has shipped.</p>
