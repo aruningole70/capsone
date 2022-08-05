@@ -32,7 +32,7 @@ const PlaceOrder = ({ }) => {
         <>
             <div className="aem-Grid aem-Grid--12 demo-Grid order-page">
                 <h1>Order Successful!</h1>
-                <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--tablet--8 aem-GridColumn--phone--12 demo-GridColumn demo-GridColumn--separator">
+                <div className="aem-GridColumn aem-GridColumn--default--8  aem-GridColumn--tablet--8 aem-GridColumn--phone--12 demo-GridColumn demo-GridColumn--separator pr32">
                     <h2>Order Number #1700834</h2>
                     <div className="aem-Grid aem-Grid--12 demo-Grid">
                         <div className="aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--tablet--6 aem-GridColumn--phone--12 demo-GridColumn demo-GridColumn--separator shiping-info-column">
@@ -83,7 +83,7 @@ const PlaceOrder = ({ }) => {
                         <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore <br /> magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. For assistance call <br /> Support at 1-800-867-5309, M - F, 9am - 8pm EST.</p>
                     </div>
                 </div>
-                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--hide  demo-GridColumn demo-GridColumn--separator discount-box">
+                <div className="aem-GridColumn aem-GridColumn--default--4 aem-GridColumn--tablet--6 aem-GridColumn--phone--hide  demo-GridColumn demo-GridColumn--separator discount-box pr32">
                     <h4>Give us a follow <br/> to SAVE 20% <br/>on your next order.</h4>
                     <div className="media-icon">
                         <ul>

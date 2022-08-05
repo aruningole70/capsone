@@ -74,11 +74,6 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
                         <br />
                     </div>
                 </div>
-                
-                {/* <div className="aem-GridColumn aem-GridColumn--default--3 demo-GridColumn">
-                    <Sidebar filterProduct={filterProduct} initialDataCat={initialDataCat} />
-                </div> */}
-                
                 <div className="aem-GridColumn aem-GridColumn--default--9 aem-GridColumn--tablet--9 aem-GridColumn--phone--12 demo-GridColumn">
                     <div className="aem-Grid aem-Grid--12 demo-Grid">
                         <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--3 aem-GridColumn--phone--hide demo-GridColumn">
@@ -119,7 +114,7 @@ const ListingBanner = ({ filterChange, data, loading, filterProduct }) => {
                                                 alt=""
                                             />
                                             <p>{prod.title}</p>
-                                            <span>${prod.price}/-</span>
+                                            <span className="pirce">${prod.price}/-</span>
                                             <br />
                                             <span><img src={heart} alt="save for leter" /></span>
                                         </div>

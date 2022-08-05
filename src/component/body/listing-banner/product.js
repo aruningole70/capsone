@@ -12,7 +12,6 @@ function Categories() {
 
   const [loading, setLoading] = useState(true);
 
-  // List=[];
 
   const [products, setProducts] = useState([]);
 

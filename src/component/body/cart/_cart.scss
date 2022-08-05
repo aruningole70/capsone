@@ -12,12 +12,12 @@
         color: #172026;
         opacity: 1;
 
-        .max-herder{
-            img{
+        .max-herder {
+            img {
                 width: 102px;
                 height: 8px;
             }
-          
+
         }
     }
 }
@@ -27,13 +27,42 @@
         display: flex;
         justify-content: space-between;
     }
-
+}
+.pricing-title{
     h2 {
         text-align: left;
         font: normal normal normal 16px/24px Muli;
         letter-spacing: 0px;
         color: #172026;
         opacity: 1;
+    }
+    p{
+        text-align: left;
+font: normal normal bold 16px/24px Muli;
+letter-spacing: 0px;
+color: #172026;
+opacity: 1;
+    }
+}
+.pricing-amount{
+    h2{
+        font: normal normal normal 16px/24px Muli;
+letter-spacing: 0px;
+color: #172026;
+opacity: 1;
+    }
+    h3{
+        font: normal normal normal 16px/24px Muli;
+letter-spacing: 0px;
+color: #172026;
+opacity: 1;
+    }
+    p{
+        text-align: right;
+font: normal normal bold 16px/24px Muli;
+letter-spacing: 0px;
+color: #172026;
+opacity: 1;
     }
 }
 
@@ -46,11 +75,17 @@
     .imp-btn {
         background-size: cover;
         background-color: #f1f7ff;
-        // background: transparent url('img/PP_BTN.png') 0% 0% no-repeat padding-box;
         opacity: 1;
 
         img {
             width: 100%;
+        }
+        h1{
+            text-align: left;
+font: normal normal 600 20px/25px Muli;
+letter-spacing: 0px;
+color: #172026;
+opacity: 1;
         }
     }
 
@@ -84,8 +119,6 @@
 }
 
 .add-minus-icon {
-
-    // padding-left: 30px;
     button {
         border: none;
         background-color: transparent;
@@ -135,47 +168,71 @@
 }
 
 .cart-list {
-    ul{
+    ul {
         li {
-            text-align: left;
             list-style-type: none;
-            font: normal normal normal 20px/25px Muli;
+        }
+
+        .cart-title {
+            text-align: left;
+            text-align: left;
+            font: normal normal 600 20px/25px Muli;
+            letter-spacing: 0px;
+            color: #172026;
+            opacity: 1;
+            font: normal normal 600 20px/25px Muli;
+            letter-spacing: 0px;
+            color: #172026;
+            opacity: 1;
+        }
+
+        .cart-size {
+            text-align: left;
+            font: normal normal normal 16px/24px Muli;
+            letter-spacing: 0px;
+            color: #172026;
+            opacity: 1;
+        }
+
+        .cart-price {
+            text-align: left;
+            font: normal normal normal 16px/24px Muli;
             letter-spacing: 0px;
             color: #172026;
             opacity: 1;
         }
     }
-  
+
 }
-.cart-button{
+
+.cart-button {
     display: flex;
     flex-direction: column;
     text-align: center;
-    .chekout{
+
+    .chekout {
         margin: 2%;
     }
-    .paypal{
+
+    .paypal {
         margin: 2%;
     }
 }
-.corosal{
+
+.corosal {
     display: flex;
     align-items: center;
     padding-top: 2%;
 }
-.arrow{
-    img{
+
+.arrow {
+    img {
         height: 100px;
     }
 }
-@media (max-width: 998px) {
-    .add-minus-icon{
-        padding: 5%;
-    }
-}
 @media (max-width: 786px) {
-    .cart-img{
-        img{
+    .cart-img {
+        img {
             height: 120px;
         }
     }

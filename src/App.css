@@ -5129,10 +5129,6 @@
   padding-left: 40px;
   position: relative;
   list-style-type: none;
-}
-
-.list-item ul li a {
-  text-decoration: none;
   color: #FFFFFF;
 }
 
@@ -5339,6 +5335,25 @@
   height: 486px;
 }
 
+.banner-products p {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font: normal normal bold 18px/20px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.banner-products .pirce {
+  text-align: left;
+  font: normal normal 600 16px/20px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
 .banner-products .active {
   width: 70%;
   height: 280px;
@@ -5466,10 +5481,6 @@
   }
 }
 
-.listed-products {
-  text-align: center;
-}
-
 .cart-items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5503,9 +5514,39 @@
           justify-content: space-between;
 }
 
-.cart-pricing h2 {
+.pricing-title h2 {
   text-align: left;
   font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pricing-title p {
+  text-align: left;
+  font: normal normal bold 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pricing-amount h2 {
+  font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pricing-amount h3 {
+  font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pricing-amount p {
+  text-align: right;
+  font: normal normal bold 16px/24px Muli;
   letter-spacing: 0px;
   color: #172026;
   opacity: 1;
@@ -5527,6 +5568,14 @@
 
 .cart-block .imp-btn img {
   width: 100%;
+}
+
+.cart-block .imp-btn h1 {
+  text-align: left;
+  font: normal normal 600 20px/25px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
 }
 
 .cart-block button {
@@ -5607,9 +5656,33 @@
 }
 
 .cart-list ul li {
-  text-align: left;
   list-style-type: none;
-  font: normal normal normal 20px/25px Muli;
+}
+
+.cart-list ul .cart-title {
+  text-align: left;
+  text-align: left;
+  font: normal normal 600 20px/25px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+  font: normal normal 600 20px/25px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.cart-list ul .cart-size {
+  text-align: left;
+  font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.cart-list ul .cart-price {
+  text-align: left;
+  font: normal normal normal 16px/24px Muli;
   letter-spacing: 0px;
   color: #172026;
   opacity: 1;
@@ -5646,12 +5719,6 @@
 
 .arrow img {
   height: 100px;
-}
-
-@media (max-width: 998px) {
-  .add-minus-icon {
-    padding: 5%;
-  }
 }
 
 @media (max-width: 786px) {
@@ -5717,7 +5784,26 @@
 }
 
 .title h2 {
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font: normal normal 600 36px/45px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.title p {
+  text-align: left;
+  font: normal normal 600 20px/30px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.title .disc {
+  text-align: left;
   letter-spacing: 0px;
   color: #172026;
   opacity: 1;
@@ -5839,8 +5925,28 @@
   opacity: 1;
 }
 
-.prdouct-discreiption-box img {
-  width: 100%;
+.prdouct-discreiption-box h1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+  font: normal normal 600 36px/45px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.prdouct-discreiption-box .product-max-header img {
+  width: 300px;
+  height: 40px;
+}
+
+.prdouct-discreiption-box p {
+  text-align: left;
+  font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
 }
 
 @media (max-widht: 786px) {
@@ -6143,14 +6249,6 @@
   }
 }
 
-.checkout h1 {
-  text-align: center;
-  font: normal normal 600 48px/45px Source Serif Pro;
-  letter-spacing: 0px;
-  color: #172026;
-  opacity: 1;
-}
-
 .checkout h2 {
   text-align: left;
   font: normal normal 600 36px/30px Source Serif Pro;
@@ -6181,6 +6279,22 @@
   letter-spacing: 0px;
   color: #172026;
   opacity: 1;
+}
+
+.checkout-heading {
+  text-align: center;
+}
+
+.checkout-heading h1 {
+  font: normal normal 600 48px/45px Source Serif Pro;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.checkout-heading img {
+  width: 102px;
+  height: 8px;
 }
 
 .shiping-input label {
@@ -6450,6 +6564,13 @@
   .state-input input {
     width: 100%;
   }
+  .shiping-address {
+    width: 96%;
+    padding-left: 2%;
+  }
+  .pr32 {
+    padding: 0px;
+  }
 }
 
 .continue {
@@ -6508,6 +6629,71 @@
   .shiping-input input {
     width: 100%;
   }
+}
+
+.cart-added-product-details h6 {
+  text-align: left;
+  font: normal normal 600 16px/20px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+  padding: 0.5em 0 0.5em 0;
+  overflow: hidden;
+  max-width: 15rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.checkout-cart-block {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  height: 325px;
+  border: 1px solid #D1D3D6;
+  border-radius: 2px;
+  opacity: 1;
+}
+
+.checkout-cart-block h1 {
+  text-align: left;
+  font: normal normal 600 20px/30px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pricing-title h4 {
+  text-align: left;
+  font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pricing-title p {
+  text-align: left;
+  font: normal normal bold 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pricing-amount h4 {
+  text-align: left;
+  font: normal normal normal 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pricing-amount p {
+  text-align: left;
+  font: normal normal bold 16px/24px Muli;
+  letter-spacing: 0px;
+  color: #172026;
+  opacity: 1;
+}
+
+.pr32 {
+  padding-right: 32px;
 }
 
 .order-page h1 {
@@ -6596,7 +6782,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 440px;
   height: 351px;
   border-radius: 2px;
   opacity: 1;

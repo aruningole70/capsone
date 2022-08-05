@@ -91,7 +91,7 @@ function Product() {
                                     <img src={star} alt="this is rating" />
                                     <img src={star1} alt="this is rating" />(175)
                                 </p>
-                                <p><span>{product.description}</span></p>
+                                <span><p className="disc">{product.description}</p></span>
                             </div>
                             <hr />
                             <div className="product-button">
@@ -116,7 +116,7 @@ function Product() {
                             <h1>{product.title}</h1>
                             <h6>Description</h6>
                             <p>{product.description}</p>
-                            <span><img src={headerline} alt="photo" /></span>
+                            <span className="product-max-header"><img src={headerline} alt="photo" /></span>
                         </div>
                     </div>
                 </>}

@@ -51,10 +51,10 @@ function Cart() {
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 cart-list">
                                     <ul>
-                                        <li>{prod.title}</li>
-                                        <li>Size : Medium</li>
-                                        <li>Color : Storm</li>
-                                        <li>${prod.price * prod.count}</li>
+                                        <li className="cart-title">{prod.title}</li>
+                                        <li className="cart-size">Size : Medium</li>
+                                        <li className="cart-size">Color : Storm</li>
+                                        <li className="cart-price">${prod.price * prod.count}</li>
                                     </ul>
                                 </div>
                                 <div className="aem-GridColumn aem-GridColumn--default--3 aem-GridColumn--tablet--6 aem-GridColumn--phone--6 add-minus-icon">
@@ -112,10 +112,10 @@ function Cart() {
                             </div>
                             <div className="pricing-amount">
                                 <h2>${subTotal}</h2>
-                                <h2>- $ 77.60</h2>
-                                <h2>- $ 100.00</h2>
-                                <h2>$ 23.28</h2>
-                                <h2>FREE</h2>
+                                <h3>- $ 77.60</h3>
+                                <h3>- $ 100.00</h3>
+                                <h3>$ 23.28</h3>
+                                <h3>FREE</h3>
                                 <p>${estTotal}</p>
                             </div>
                         </div>

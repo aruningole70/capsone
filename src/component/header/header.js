@@ -38,6 +38,9 @@ const Header = () => {
     const handleClick = () => {
         navigate('/cart');
     };
+    const click = () => {
+        navigate('/body');
+    }
     return (
         <nav className='aem-Grid aem-Grid--12 demo-Gridd'>
             <div className='aem-Grid aem-Grid--12 demo-Grid main-nav'>
@@ -45,11 +48,11 @@ const Header = () => {
                 <div className='aem-GridColumn aem-GridColumn--default--6 aem-GridColumn--phone--12 aem-GridColumn--tablet--6 demo-GridColumn demo-GridColumn--separator list-item'>
                     <div>
                         <ul>
-                            <li><a href='#'>Home</a></li>
-                            <li><a href='#'>Women</a></li>
-                            <li><a href='#'>Men</a></li>
-                            <li><a href='#'>Smart Gear</a></li>
-                            <li><a href='#'>Accessories</a></li>
+                            <li onClick={homeClick} >Home</li>
+                            <li onClick={click}>Women</li>
+                            <li onClick={click}>Men</li>
+                            <li>Smart Gear</li>
+                            <li>Accessories</li>
                         </ul>
                     </div>
                 </div>
